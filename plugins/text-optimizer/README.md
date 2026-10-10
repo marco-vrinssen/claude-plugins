@@ -14,7 +14,7 @@ Flag-driven text transforms for Claude Code. Load the skill once per conversatio
 | `-s` | shortens to the essential points |
 | `-l` | turns the input into short, clear entries, one per line, such as a to-do list or timesheet |
 | `-p` | turns the input into a lean prompt for Claude |
-| `-pp` | builds an extensive prompt for Claude and asks about open points first |
+| `-pp` | builds an extensive prompt for Claude and asks about open points first in a question dialog |
 | `-ip` | turns the input into a detailed image prompt |
 | `-xx` | a two-letter language code such as `-en` or `-de`, alone it translates |
 | `-flags` | shows this table |

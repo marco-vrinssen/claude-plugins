@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "text-optimizer",
+  "displayName": "Text Optimizer",
+  "version": "2.0.0",
+  "description": "Flag-driven text transforms. Load with /text, then start a message with a flag to correct, translate, sharpen, polish, soften, shorten or list text, or to build prompts for Claude and image models.",
+  "author": {
+    "name": "Marco Vrinssen",
+    "url": "https://github.com/marco-vrinssen"
+  },
+  "homepage": "https://github.com/marco-vrinssen/text-optimizer",
+  "repository": "https://github.com/marco-vrinssen/text-optimizer",
+  "license": "MIT",
+  "keywords": [
+    "writing",
+    "translation",
+    "prompt-engineering",
+    "editing",
+    "productivity"
+  ]
+}

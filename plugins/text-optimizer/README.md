@@ -38,7 +38,7 @@ Sent findings to Jana.
 
 ```
 /plugin marketplace add marco-vrinssen/claude-plugins
-/plugin install text-optimizer@marcovrinssen
+/plugin install text-optimizer@marco-vrinssen
 ```
 
 Codex, Cursor and other agents that read Agent Skills:

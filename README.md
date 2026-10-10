@@ -1,6 +1,6 @@
 # Claude plugins
 
-Claude Code plugins by Marco Vrinssen, published as the marketplace `marcovrinssen`.
+Claude Code plugins by Marco Vrinssen, published as the marketplace `marco-vrinssen`.
 
 | Plugin | Does |
 |---|---|
@@ -12,7 +12,7 @@ Claude Code plugins by Marco Vrinssen, published as the marketplace `marcovrinss
 
 ```
 /plugin marketplace add marco-vrinssen/claude-plugins
-/plugin install text-optimizer@marcovrinssen
+/plugin install text-optimizer@marco-vrinssen
 ```
 
 Swap in any plugin name from the table.

@@ -8,8 +8,8 @@
     "name": "Marco Vrinssen",
     "url": "https://github.com/marco-vrinssen"
   },
-  "homepage": "https://github.com/marco-vrinssen/text-optimizer",
-  "repository": "https://github.com/marco-vrinssen/text-optimizer",
+  "homepage": "https://github.com/marco-vrinssen/claude-plugins/tree/main/plugins/text-optimizer",
+  "repository": "https://github.com/marco-vrinssen/claude-plugins",
   "license": "MIT",
   "keywords": [
     "writing",

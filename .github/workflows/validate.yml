@@ -19,3 +19,7 @@ jobs:
       - run: npm install --global @anthropic-ai/claude-code
       - name: Validate marketplace
         run: claude plugin validate --strict .
+      - name: Validate plugins
+        run: for p in plugins/*/.claude-plugin/plugin.json; do claude plugin validate --strict "$p" || exit 1; done
+      - name: Check skill discovery
+        run: npx --yes skills add . --list

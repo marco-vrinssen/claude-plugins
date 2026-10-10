@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "marcovrinssen",
+  "description": "Claude Code plugins by Marco Vrinssen.",
+  "owner": {
+    "name": "Marco Vrinssen",
+    "url": "https://github.com/marco-vrinssen"
+  },
+  "plugins": [
+    {
+      "name": "text-optimizer",
+      "source": { "source": "github", "repo": "marco-vrinssen/text-optimizer" },
+      "description": "Flag-driven text transforms. Load with /text, then start a message with a flag to correct, translate, sharpen, polish, soften, shorten or list text, or to build prompts for Claude and image models.",
+      "category": "productivity"
+    },
+    {
+      "name": "mdr-check",
+      "source": { "source": "github", "repo": "marco-vrinssen/mdr-check" },
+      "description": "Checks health and wellness marketing copy for wording that could make the product a medical device or an illegal medical claim under EU MDR 2017/745, HWG and UWG. Returns each flagged phrase with its legal hook, a risk tier and a safer rewrite.",
+      "category": "productivity"
+    },
+    {
+      "name": "video-reader",
+      "source": { "source": "github", "repo": "marco-vrinssen/video-reader" },
+      "description": "Reads YouTube videos through their transcript, chapters and metadata with yt-dlp, and samples still frames for on-screen content. Summarizes, answers questions and cites timestamps.",
+      "category": "productivity"
+    }
+  ]
+}

@@ -8,8 +8,8 @@
     "name": "Marco Vrinssen",
     "url": "https://github.com/marco-vrinssen"
   },
-  "homepage": "https://github.com/marco-vrinssen/video-reader",
-  "repository": "https://github.com/marco-vrinssen/video-reader",
+  "homepage": "https://github.com/marco-vrinssen/claude-plugins/tree/main/plugins/video-reader",
+  "repository": "https://github.com/marco-vrinssen/claude-plugins",
   "license": "MIT",
   "keywords": [
     "youtube",

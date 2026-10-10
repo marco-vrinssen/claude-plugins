@@ -37,14 +37,14 @@ Sent findings to Jana.
 ## Install
 
 ```
-/plugin marketplace add marco-vrinssen/marcovrinssen
+/plugin marketplace add marco-vrinssen/claude-plugins
 /plugin install text-optimizer@marcovrinssen
 ```
 
 Codex, Cursor and other agents that read Agent Skills:
 
 ```
-npx skills add marco-vrinssen/text-optimizer
+npx skills add marco-vrinssen/claude-plugins --skill text
 ```
 
 ## What it runs and fetches

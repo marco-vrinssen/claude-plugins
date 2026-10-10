@@ -24,14 +24,14 @@ For consistent results across runs, keep a product profile as `mdr-profile.md` i
 ## Install
 
 ```
-/plugin marketplace add marco-vrinssen/marcovrinssen
+/plugin marketplace add marco-vrinssen/claude-plugins
 /plugin install mdr-check@marcovrinssen
 ```
 
 Codex, Cursor and other agents that read Agent Skills:
 
 ```
-npx skills add marco-vrinssen/mdr-check
+npx skills add marco-vrinssen/claude-plugins --skill mdr-check
 ```
 
 ## What it runs and fetches

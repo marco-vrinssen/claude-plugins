@@ -20,14 +20,14 @@ It also triggers on its own when a YouTube link appears and its content matters.
 ## Install
 
 ```
-/plugin marketplace add marco-vrinssen/marcovrinssen
+/plugin marketplace add marco-vrinssen/claude-plugins
 /plugin install video-reader@marcovrinssen
 ```
 
 Codex, Cursor and other agents that read Agent Skills:
 
 ```
-npx skills add marco-vrinssen/video-reader
+npx skills add marco-vrinssen/claude-plugins --skill youtube
 ```
 
 ## Requirements

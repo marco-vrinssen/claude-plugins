@@ -8,8 +8,8 @@
     "name": "Marco Vrinssen",
     "url": "https://github.com/marco-vrinssen"
   },
-  "homepage": "https://github.com/marco-vrinssen/mdr-check",
-  "repository": "https://github.com/marco-vrinssen/mdr-check",
+  "homepage": "https://github.com/marco-vrinssen/claude-plugins/tree/main/plugins/mdr-check",
+  "repository": "https://github.com/marco-vrinssen/claude-plugins",
   "license": "MIT",
   "keywords": [
     "medical-device",

@@ -2,7 +2,7 @@
 
 ## Rules
 
-- The repo is the marketplace `marcovrinssen`. Each plugin lives in `plugins/<name>/` with its own `.claude-plugin/plugin.json`, `skills/`, README and CHANGELOG, and is listed in `.claude-plugin/marketplace.json` with `source: "./plugins/<name>"`.
+- The repo is the marketplace `marco-vrinssen`. Each plugin lives in `plugins/<name>/` with its own `.claude-plugin/plugin.json`, `skills/`, README and CHANGELOG, and is listed in `.claude-plugin/marketplace.json` with `source: "./plugins/<name>"`.
 - Only public plugins go here. Private plugins such as website-pitch and pitch-mail stay in their own private repos.
 - WoW plugins belong to the `miyanko-dev` marketplaces, not here.
 - A generic or brand name as plugin name triggers a review hold in the plugin directory. So the skills keep their short names: text-optimizer ships `/text`, video-reader ships `/youtube`.

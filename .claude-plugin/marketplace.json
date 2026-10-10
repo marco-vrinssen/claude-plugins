@@ -1,6 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
-  "name": "marcovrinssen",
+  "name": "marco-vrinssen",
   "description": "Claude Code plugins by Marco Vrinssen.",
   "owner": {
     "name": "Marco Vrinssen",

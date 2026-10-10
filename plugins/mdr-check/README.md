@@ -25,7 +25,7 @@ For consistent results across runs, keep a product profile as `mdr-profile.md` i
 
 ```
 /plugin marketplace add marco-vrinssen/claude-plugins
-/plugin install mdr-check@marcovrinssen
+/plugin install mdr-check@marco-vrinssen
 ```
 
 Codex, Cursor and other agents that read Agent Skills:

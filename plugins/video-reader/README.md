@@ -21,7 +21,7 @@ It also triggers on its own when a YouTube link appears and its content matters.
 
 ```
 /plugin marketplace add marco-vrinssen/claude-plugins
-/plugin install video-reader@marcovrinssen
+/plugin install video-reader@marco-vrinssen
 ```
 
 Codex, Cursor and other agents that read Agent Skills:

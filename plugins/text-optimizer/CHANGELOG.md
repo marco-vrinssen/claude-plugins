@@ -2,7 +2,7 @@
 
 ## 2.0.0 (2026-10-10)
 
-- Renamed from text-flags to text-optimizer. Install it from the marcovrinssen marketplace as `text-optimizer@marcovrinssen`. `/text` and every flag work as before.
+- Renamed from text-flags to text-optimizer. Install it from the marco-vrinssen marketplace as `text-optimizer@marco-vrinssen`. `/text` and every flag work as before.
 
 ## 1.0.0 (2026-10-08)
 

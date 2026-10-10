@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "mdr-check",
+  "displayName": "MDR Check",
+  "version": "1.0.0",
+  "description": "Checks health and wellness marketing copy for wording that could make the product a medical device or an illegal medical claim under EU MDR 2017/745, HWG and UWG. Returns each flagged phrase with its legal hook, a risk tier and a safer rewrite.",
+  "author": {
+    "name": "Marco Vrinssen",
+    "url": "https://github.com/marco-vrinssen"
+  },
+  "homepage": "https://github.com/marco-vrinssen/mdr-check",
+  "repository": "https://github.com/marco-vrinssen/mdr-check",
+  "license": "MIT",
+  "keywords": [
+    "medical-device",
+    "mdr",
+    "regulatory",
+    "marketing",
+    "compliance",
+    "digital-health"
+  ]
+}

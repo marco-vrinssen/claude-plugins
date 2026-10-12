@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "resume-ai-optimizer",
+  "displayName": "Resume AI Optimizer",
+  "version": "1.0.0",
+  "description": "Optimizes resumes for AI-screened hiring. Checks that screening software can read the PDF, maps the resume to a job description without keyword stuffing, rewrites bullets into quantified XYZ achievements without inventing facts, and shows AI skills through proof.",
+  "author": {
+    "name": "Marco Vrinssen",
+    "url": "https://github.com/marco-vrinssen"
+  },
+  "homepage": "https://github.com/marco-vrinssen/claude-plugins/tree/main/plugins/resume-ai-optimizer",
+  "repository": "https://github.com/marco-vrinssen/claude-plugins",
+  "license": "MIT",
+  "keywords": [
+    "resume",
+    "cv",
+    "ats",
+    "job-application",
+    "career"
+  ]
+}

@@ -24,6 +24,12 @@
       "source": "./plugins/video-reader",
       "description": "Reads YouTube videos through their transcript, chapters and metadata with yt-dlp, and samples still frames for on-screen content. Summarizes, answers questions and cites timestamps.",
       "category": "productivity"
+    },
+    {
+      "name": "resume-ai-optimizer",
+      "source": "./plugins/resume-ai-optimizer",
+      "description": "Optimizes resumes for AI-screened hiring. Checks that screening software can read the PDF, maps the resume to a job description without keyword stuffing, rewrites bullets into quantified XYZ achievements without inventing facts, and shows AI skills through proof.",
+      "category": "productivity"
     }
   ]
 }

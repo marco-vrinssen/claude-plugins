@@ -6,7 +6,7 @@ Flag-driven text transforms for Claude Code. Load the skill once per conversatio
 
 | Flag | Does |
 |---|---|
-| `-c` | corrects spelling, grammar and punctuation |
+| `-c` | fixes typos and changes nothing else |
 | `-t` | translates between German and English, or flips another flag's output language |
 | `-o` | sharpens into clear, concise writing and neutralizes the tone |
 | `-e` | rewrites into articulate, well-spoken prose in plain, easy-to-read sentences |

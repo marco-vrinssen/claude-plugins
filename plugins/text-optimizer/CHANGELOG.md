@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.3.0 (2026-10-12)
+
+- `-c` fixes casing and punctuation again, next to typos. Wording, tone, style, abbreviations and the writer's dashes and semicolons still stay.
+
 ## 2.2.0 (2026-10-12)
 
 - `-c` fixes typos only. Wording, tone, style, casing, punctuation, dashes and abbreviations stay exactly as written.

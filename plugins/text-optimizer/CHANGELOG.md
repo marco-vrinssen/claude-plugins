@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.4.0 (2026-10-12)
+
+- New core rule: every command changes how the text is said, never what it says. Subjects, references, conditions and reasons stay attached, hedges and certainty keep their strength, and nothing gets more specific or gains a cause or conclusion.
+- `-o` keeps real hedges and states positions at full strength. `-e` keeps a vague word when the input does not show the exact one.
+- Examples that added or shifted meaning are fixed.
+
 ## 2.3.0 (2026-10-12)
 
 - `-c` fixes casing and punctuation again, next to typos. Wording, tone, style, abbreviations and the writer's dashes and semicolons still stay.

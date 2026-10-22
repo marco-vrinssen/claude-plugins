@@ -4,14 +4,8 @@
 
 - The repo is the marketplace `marco-vrinssen`. Each plugin lives in `plugins/<name>/` with its own `.claude-plugin/plugin.json`, `skills/`, README and CHANGELOG, and is listed in `.claude-plugin/marketplace.json` with `source: "./plugins/<name>"`.
 - Only public plugins go here. Private plugins stay in their own private repos.
-- A generic or brand name as plugin name triggers a review hold in the plugin directory. So the skills keep their short names: text-optimizer ships `/text`, video-reader ships `/youtube`.
-
-## text-optimizer
-
-- Named `text-flags` until 2.0.0.
-- `-l` never writes in a consulting register.
-- `-e` writes plain, easy-to-read sentences and never a legal or official register.
-- Every rule in `-p` traces to Anthropic's prompting docs, the best practices page and the Opus 5.5 and Sonnet 5.5 pages. Add none without such a source.
+- A generic or brand name as plugin name triggers a review hold in the plugin directory. So the skills keep their short names: video-reader ships `/youtube`.
+- text-optimizer left on 2026-10-22 and is now a personal skill outside this repo. Its history and `text-optimizer-v*` tags stay in git.
 
 ## Checks
 

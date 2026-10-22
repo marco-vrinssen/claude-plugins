@@ -5,8 +5,6 @@
 - The repo is the marketplace `marco-vrinssen`. Each plugin lives in `plugins/<name>/` with its own `.claude-plugin/plugin.json`, `skills/`, README and CHANGELOG, and is listed in `.claude-plugin/marketplace.json` with `source: "./plugins/<name>"`.
 - Only public plugins go here. Private plugins stay in their own private repos.
 - A generic or brand name as plugin name triggers a review hold in the plugin directory. So the skills keep their short names: video-reader ships `/youtube`.
-- text-optimizer left on 2026-10-22 and is now a personal skill outside this repo. Its history and `text-optimizer-v*` tags stay in git.
-
 ## Checks
 
 - `claude plugin validate --strict .` checks the marketplace, and `claude plugin validate --strict plugins/<name>/.claude-plugin/plugin.json` each plugin. Fix every warning.

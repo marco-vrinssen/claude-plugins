@@ -6,8 +6,6 @@ Claude Code plugins by Marco Vrinssen, published as the marketplace `marco-vrins
 |---|---|
 | [video-reader](plugins/video-reader) | reads YouTube videos through transcript, chapters and frames |
 | [resume-ai-optimizer](plugins/resume-ai-optimizer) | optimizes resumes for AI screening: readable PDF, keyword fit, quantified bullets |
-| [computer-checkup](plugins/computer-checkup) | checks a slow Mac and fixes only what you approve, with `/maccheck` |
-
 ## Install
 
 ```

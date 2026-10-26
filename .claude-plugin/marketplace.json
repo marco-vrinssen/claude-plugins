@@ -18,6 +18,12 @@
       "source": "./plugins/resume-ai-optimizer",
       "description": "Optimizes resumes for AI-screened hiring. Checks that screening software can read the PDF, maps the resume to a job description without keyword stuffing, rewrites bullets into quantified XYZ achievements without inventing facts, and shows AI skills through proof.",
       "category": "productivity"
+    },
+    {
+      "name": "computer-checkup",
+      "source": "./plugins/computer-checkup",
+      "description": "Checks why a Mac is slow, full or at risk and fixes only what you approve. Asks which areas to cover, runs read-only checks of processes, login items, apps, storage, security and backups, reports numbered fixes and applies only the confirmed ones.",
+      "category": "productivity"
     }
   ]
 }

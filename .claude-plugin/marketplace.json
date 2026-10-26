@@ -8,12 +8,6 @@
   },
   "plugins": [
     {
-      "name": "mdr-check",
-      "source": "./plugins/mdr-check",
-      "description": "Checks health and wellness marketing copy for wording that could make the product a medical device or an illegal medical claim under EU MDR 2017/745, HWG and UWG. Returns each flagged phrase with its legal hook, a risk tier and a safer rewrite.",
-      "category": "productivity"
-    },
-    {
       "name": "video-reader",
       "source": "./plugins/video-reader",
       "description": "Reads YouTube videos through their transcript, chapters and metadata with yt-dlp, and samples still frames for on-screen content. Summarizes, answers questions and cites timestamps.",

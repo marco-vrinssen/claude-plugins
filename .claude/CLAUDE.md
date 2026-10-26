@@ -3,6 +3,8 @@
 ## Rules
 
 - The repo is the marketplace `marco-vrinssen`. Each plugin lives in `plugins/<name>/` with its own `.claude-plugin/plugin.json`, `skills/`, README and CHANGELOG, and is listed in `.claude-plugin/marketplace.json` with `source: "./plugins/<name>"`.
+- A plugin for one of the owner's MCP servers has `.mcp.json` instead of `skills/` and runs the server's repo with `npx -y github:<owner>/<repo>#semver:^1`. The server's own instructions carry its usage rules, so the plugin adds no skill. Server releases reach users without a plugin release.
+- Claude Code passes a `userConfig` option the user left unset as its literal `${user_config.…}` placeholder (checked 2026-10-26), so a server must treat that as unset.
 - Only public plugins go here. Private plugins stay in their own private repos.
 - A generic or brand name as plugin name triggers a review hold in the plugin directory. So the skills keep their short names: video-reader ships `/youtube`.
 ## Checks

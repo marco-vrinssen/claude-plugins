@@ -42,6 +42,12 @@
       "source": "./plugins/financial-analysis",
       "description": "Investment research for private investors in Germany. Turns a ticker, ISIN, ETF, theme, pitch or stock tip into a sourced report with a buy, watch or avoid verdict.",
       "category": "productivity"
+    },
+    {
+      "name": "wow-addon-dev",
+      "source": "./plugins/wow-addon-dev",
+      "description": "World of Warcraft addon and WeakAura development. Verifies every API against the matching flavor branch of Blizzard's UI source, covers Midnight secret values, and builds ready-to-paste WeakAura import strings.",
+      "category": "development"
     }
   ]
 }

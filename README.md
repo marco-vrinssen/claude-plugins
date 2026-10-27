@@ -10,6 +10,7 @@ Claude Code plugins by Marco Vrinssen, published as the marketplace `marco-vrins
 | [namefinder](plugins/namefinder) | generates names from sound symbolism, tuned to your taste |
 | [maccheck](plugins/maccheck) | finds why a Mac is slow, full or at risk and fixes what you approve |
 | [financial-analysis](plugins/financial-analysis) | sourced investment research with a buy, watch or avoid verdict |
+| [wow-addon-dev](plugins/wow-addon-dev) | World of Warcraft addon and WeakAura development checked against Blizzard's UI source |
 
 ## Install
 

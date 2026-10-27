@@ -18,6 +18,30 @@
       "source": "./plugins/resume-ai-optimizer",
       "description": "Optimizes resumes for AI-screened hiring. Checks that screening software can read the PDF, maps the resume to a job description without keyword stuffing, rewrites bullets into quantified XYZ achievements without inventing facts, and shows AI skills through proof.",
       "category": "productivity"
+    },
+    {
+      "name": "writing",
+      "source": "./plugins/writing",
+      "description": "Flag-driven text transformation. One flag fixes, translates, sharpens, shortens, lists or humanizes text, or turns it into a prompt for Claude. Keeps the input's language and meaning.",
+      "category": "productivity"
+    },
+    {
+      "name": "namefinder",
+      "source": "./plugins/namefinder",
+      "description": "Generates brand, product, project and character names from sound symbolism, tuned to your taste.",
+      "category": "productivity"
+    },
+    {
+      "name": "maccheck",
+      "source": "./plugins/maccheck",
+      "description": "Checks why a Mac is slow, full or at risk with read-only checks, reports numbered fixes and applies only the fixes you confirm.",
+      "category": "productivity"
+    },
+    {
+      "name": "financial-analysis",
+      "source": "./plugins/financial-analysis",
+      "description": "Investment research for private investors in Germany. Turns a ticker, ISIN, ETF, theme, pitch or stock tip into a sourced report with a buy, watch or avoid verdict.",
+      "category": "productivity"
     }
   ]
 }

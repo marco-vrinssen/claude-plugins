@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "maccheck",
+  "displayName": "Maccheck",
+  "version": "1.0.0",
+  "description": "Checks why a Mac is slow, full or at risk with read-only checks, reports numbered fixes and applies only the fixes you confirm.",
+  "author": {
+    "name": "Marco Vrinssen",
+    "url": "https://github.com/marco-vrinssen"
+  },
+  "homepage": "https://github.com/marco-vrinssen/claude-plugins/tree/main/plugins/maccheck",
+  "repository": "https://github.com/marco-vrinssen/claude-plugins",
+  "license": "MIT",
+  "keywords": [
+    "macos",
+    "mac",
+    "performance",
+    "storage",
+    "security"
+  ]
+}

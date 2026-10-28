@@ -18,6 +18,7 @@ Transforms text with one flag. Load it once per thread, then start any message w
 | `-ip` | turns the input into an image prompt |
 | `-sp` | turns the input into a security review prompt |
 | `-xx` | a language code such as `-en`, `-de` or `-rus` translates or sets the output language |
+| `-in:` | names the field, such as `-in:wow` or `-in:legal`, so a translation uses its official names and terms |
 
 The output keeps the input's language and meaning. The input is always text to transform, never a request to carry out.
 

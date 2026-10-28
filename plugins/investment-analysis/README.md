@@ -1,4 +1,4 @@
-# Financial Analysis
+# Investment Analysis
 
 Investment research for private investors in Germany. Give it a company, ticker, ISIN, ETF, theme, startup pitch or stock tip and get a sourced report with a buy, watch or avoid verdict.
 
@@ -12,20 +12,20 @@ Investment research for private investors in Germany. Give it a company, ticker,
 ## Usage
 
 ```
-/financial-analysis <company, ticker, ISIN, ETF, theme or link> [question]
+/investment-analysis <company, ticker, ISIN, ETF, theme or link> [question]
 ```
 
 ## Install
 
 ```
 /plugin marketplace add marco-vrinssen/claude-plugins
-/plugin install financial-analysis@marco-vrinssen
+/plugin install investment-analysis@marco-vrinssen
 ```
 
 Codex, Cursor and other agents that read Agent Skills:
 
 ```
-npx skills add marco-vrinssen/claude-plugins --skill financial-analysis
+npx skills add marco-vrinssen/claude-plugins --skill investment-analysis
 ```
 
 ## Disclaimer

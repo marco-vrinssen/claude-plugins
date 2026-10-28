@@ -1,4 +1,4 @@
-# Video Reader
+# YouTube Reader
 
 Lets Claude read a YouTube video. Claude has no video or audio input, so the skill pulls the transcript, chapters and metadata locally with yt-dlp and, when needed, samples still frames for slides, code or UI shown on screen.
 
@@ -12,7 +12,7 @@ Lets Claude read a YouTube video. Claude has no video or audio input, so the ski
 ## Usage
 
 ```
-/youtube <url> [question]
+/youtube-reader <url> [question]
 ```
 
 It also triggers on its own when a YouTube link appears and its content matters.
@@ -21,13 +21,13 @@ It also triggers on its own when a YouTube link appears and its content matters.
 
 ```
 /plugin marketplace add marco-vrinssen/claude-plugins
-/plugin install video-reader@marco-vrinssen
+/plugin install youtube-reader@marco-vrinssen
 ```
 
 Codex, Cursor and other agents that read Agent Skills:
 
 ```
-npx skills add marco-vrinssen/claude-plugins --skill youtube
+npx skills add marco-vrinssen/claude-plugins --skill youtube-reader
 ```
 
 ## Requirements

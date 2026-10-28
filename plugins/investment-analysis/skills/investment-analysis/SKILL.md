@@ -1,10 +1,10 @@
 ---
-name: financial-analysis
-description: "Investment research for a private investor in Germany. Give a company, ticker, ISIN, ETF, theme, startup pitch or social media stock tip and get a sourced decision report with a buy, watch or avoid verdict. Invoke as /financial-analysis <target> [question]. Use whenever the user asks whether to invest in something, what a stock, fund or theme is worth, or to fact-check stock picks."
+name: investment-analysis
+description: "Investment research for a private investor in Germany. Give a company, ticker, ISIN, ETF, theme, startup pitch or social media stock tip and get a sourced decision report with a buy, watch or avoid verdict. Invoke as /investment-analysis <target> [question]. Use whenever the user asks whether to invest in something, what a stock, fund or theme is worth, or to fact-check stock picks."
 argument-hint: "<company, ticker, ISIN, ETF, theme or link> [question]"
 ---
 
-# Financial analysis
+# Investment analysis
 
 Decision research for a private investor in Germany. The target is: $ARGUMENTS
 

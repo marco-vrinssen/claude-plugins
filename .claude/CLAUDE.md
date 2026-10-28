@@ -4,7 +4,7 @@
 
 - The repo is the marketplace `marco-vrinssen`. Each plugin lives in `plugins/<name>/` with its own `.claude-plugin/plugin.json`, `skills/`, README and CHANGELOG, and is listed in `.claude-plugin/marketplace.json` with `source: "./plugins/<name>"`.
 - Only public plugins go here. Private plugins stay in their own private repos.
-- A plugin and its skill share one name, so the skill runs as `/<name>:<name>`. video-reader and resume-ai-optimizer predate this rule. A generic name can trigger a review hold in Anthropic's plugin directory, which is accepted.
+- A plugin and its skill share one name, so the skill runs as `/<name>:<name>`. A generic name can trigger a review hold in Anthropic's plugin directory, which is accepted.
 ## Checks
 
 - `claude plugin validate --strict .` checks the marketplace, and `claude plugin validate --strict plugins/<name>/.claude-plugin/plugin.json` each plugin. Fix every warning.

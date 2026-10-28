@@ -8,8 +8,8 @@
   },
   "plugins": [
     {
-      "name": "video-reader",
-      "source": "./plugins/video-reader",
+      "name": "youtube-reader",
+      "source": "./plugins/youtube-reader",
       "description": "Reads YouTube videos through their transcript, chapters and metadata with yt-dlp, and samples still frames for on-screen content. Summarizes, answers questions and cites timestamps.",
       "category": "productivity"
     },
@@ -38,8 +38,8 @@
       "category": "productivity"
     },
     {
-      "name": "financial-analysis",
-      "source": "./plugins/financial-analysis",
+      "name": "investment-analysis",
+      "source": "./plugins/investment-analysis",
       "description": "Investment research for private investors in Germany. Turns a ticker, ISIN, ETF, theme, pitch or stock tip into a sourced report with a buy, watch or avoid verdict.",
       "category": "productivity"
     },

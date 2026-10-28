@@ -1,14 +1,14 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
-  "name": "financial-analysis",
-  "displayName": "Financial Analysis",
-  "version": "1.0.0",
+  "name": "investment-analysis",
+  "displayName": "Investment Analysis",
+  "version": "2.0.0",
   "description": "Investment research for private investors in Germany. Turns a ticker, ISIN, ETF, theme, pitch or stock tip into a sourced report with a buy, watch or avoid verdict.",
   "author": {
     "name": "Marco Vrinssen",
     "url": "https://github.com/marco-vrinssen"
   },
-  "homepage": "https://github.com/marco-vrinssen/claude-plugins/tree/main/plugins/financial-analysis",
+  "homepage": "https://github.com/marco-vrinssen/claude-plugins/tree/main/plugins/investment-analysis",
   "repository": "https://github.com/marco-vrinssen/claude-plugins",
   "license": "MIT",
   "keywords": [

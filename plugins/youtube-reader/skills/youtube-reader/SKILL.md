@@ -1,16 +1,16 @@
 ---
-name: youtube
-description: read and answer questions about a youtube video by pulling its transcript, chapters and metadata locally with yt-dlp, and optionally sampling still frames for on-screen content. invoke as /youtube <url> [question]. use whenever a youtube or youtu.be link appears and the content of the video matters — summaries, extracting code or commands shown in a talk, finding the timestamp where something is said, comparing claims across videos. also handles videos with no captions by falling back to frames or local transcription.
+name: youtube-reader
+description: read and answer questions about a youtube video by pulling its transcript, chapters and metadata locally with yt-dlp, and optionally sampling still frames for on-screen content. invoke as /youtube-reader <url> [question]. use whenever a youtube or youtu.be link appears and the content of the video matters — summaries, extracting code or commands shown in a talk, finding the timestamp where something is said, comparing claims across videos. also handles videos with no captions by falling back to frames or local transcription.
 ---
 
-# YouTube
+# YouTube reader
 
 Read a YouTube video through its transcript. Claude has no video or audio input,
 so everything runs through text plus optional still frames.
 
 ## Invocation
 
-`/youtube <url> [question]`
+`/youtube-reader <url> [question]`
 
 With no question, produce a structured summary. With a question, answer only that.
 

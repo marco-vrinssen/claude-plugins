@@ -13,7 +13,7 @@ Optimizes a resume for hiring where AI screens first and a human decides. Built 
 ## Usage
 
 ```
-/resume <resume.pdf or text> [job description, URL or file]
+/resume-ai-optimizer <resume.pdf or text> [job description, URL or file]
 ```
 
 Without a job description it runs the audit only. Rough notes about one role turn into bullets. It also triggers on its own when you ask to improve or tailor a resume or CV.
@@ -28,7 +28,7 @@ Without a job description it runs the audit only. Rough notes about one role tur
 Codex, Cursor and other agents that read Agent Skills:
 
 ```
-npx skills add marco-vrinssen/claude-plugins --skill resume
+npx skills add marco-vrinssen/claude-plugins --skill resume-ai-optimizer
 ```
 
 ## What it runs and fetches

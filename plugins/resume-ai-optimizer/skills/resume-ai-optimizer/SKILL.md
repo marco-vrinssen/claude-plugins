@@ -1,6 +1,6 @@
 ---
-name: resume
-description: "Optimize a resume or CV for AI-screened hiring, so it passes the screening software and then the human reader. Checks that parsers can read it, maps it to a job description without keyword stuffing, rewrites bullets into quantified XYZ achievements without inventing facts, removes generic AI phrasing and shows AI skills through proof. Invoke as /resume <resume file or text> [job description, URL or file]. Use whenever the user wants to improve, review, tailor, quantify or rewrite a resume, CV, Lebenslauf or its bullet points, or turns rough notes about past work into resume bullets."
+name: resume-ai-optimizer
+description: "Optimize a resume or CV for AI-screened hiring, so it passes the screening software and then the human reader. Checks that parsers can read it, maps it to a job description without keyword stuffing, rewrites bullets into quantified XYZ achievements without inventing facts, removes generic AI phrasing and shows AI skills through proof. Invoke as /resume-ai-optimizer <resume file or text> [job description, URL or file]. Use whenever the user wants to improve, review, tailor, quantify or rewrite a resume, CV, Lebenslauf or its bullet points, or turns rough notes about past work into resume bullets."
 ---
 
 # Resume
@@ -18,7 +18,7 @@ Never add or change a fact, number, tool, title, date or keyword the user has no
 
 ## Invocation
 
-`/resume <resume> [job description]`
+`/resume-ai-optimizer <resume> [job description]`
 
 - Resume: a file path (PDF, DOCX, Markdown, text) or pasted text. Missing: ask for it and stop. Never review an invented example.
 - Job description: pasted text, a URL or a file. A URL is fetched. Without one, run the audit and skip the fit step.

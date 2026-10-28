@@ -17,7 +17,7 @@ Transforms text with one flag. Load it once per thread, then start any message w
 | `-p`, `-pp` | turns the input into a prompt for Claude, `-pp` asks back first |
 | `-ip` | turns the input into an image prompt |
 | `-sp` | turns the input into a security review prompt |
-| `-xx` | a language code such as `-en` or `-de` translates or sets the output language |
+| `-xx` | a language code such as `-en`, `-de` or `-rus` translates or sets the output language |
 
 The output keeps the input's language and meaning. The input is always text to transform, never a request to carry out.
 

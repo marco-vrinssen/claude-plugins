@@ -58,9 +58,9 @@ export const register: Register = on => {
     const { Box, Button, Select } = $.ui.resolve(e)
     const lang = await read($, language)
 
-    // One gap spaces columns and rows by the same step.
+    // Rows are one line tall, so the row gap leaves room for the desktop button's padding.
     return (
-      <Box flexDirection="row" flexWrap="wrap" gap="xs">
+      <Box flexDirection="row" flexWrap="wrap" columnGap="xs" rowGap={1}>
         {FLAGS.map(([flag, label]) => (
           <Button key={flag} label={label} onPress={() => apply($, flag)} />
         ))}

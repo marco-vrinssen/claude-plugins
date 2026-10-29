@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.5.0 (2026-10-29)
+
+- The Language picker is a button like the others. It opens one button per language in place of the flags, and a pick closes it again.
+- Korean joins the languages.
+- More space between the buttons.
+
 ## 1.4.0 (2026-10-29)
 
 - A Language picker in the band sets the output language for every button: Same keeps the input's language, or pick English, German, French, Spanish, Italian, Dutch or Russian.

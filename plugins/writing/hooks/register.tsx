@@ -21,6 +21,7 @@ export const FLAGS = [
   ['-c', 'Correct'],
   ['-t', 'Translate'],
   ['-o', 'Sharpen'],
+  ['-e', 'Eloquent'],
   ['-f', 'Warm'],
   ['-sum', 'Summarize'],
   ['-s', 'Shorten'],

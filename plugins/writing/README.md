@@ -30,7 +30,7 @@ The output keeps the input's language and meaning. The input is always text to t
 -o kannst du mir bitte endlich die zahlen schicken??
 ```
 
-In Claude Code, `/writing` also shows a band of buttons above the prompt: Correct, Translate, Sharpen, Warm, Summarize, Shorten, Humanize, List and the four prompt builders. Type or paste the text, then press a button instead of typing its flag. With an empty prompt, a button reworks the last output. The Response Language picker sets the output language for every button, Original keeps the input's. The band stays for the rest of the session.
+In Claude Code, `/writing` also shows a band of buttons above the prompt: Correct, Translate, Sharpen, Eloquent, Warm, Summarize, Shorten, Humanize, List and the four prompt builders. Type or paste the text, then press a button instead of typing its flag. With an empty prompt, a button reworks the last output. The Response Language picker sets the output language for every button, Original keeps the input's. The band stays for the rest of the session.
 
 ## Install
 

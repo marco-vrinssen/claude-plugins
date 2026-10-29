@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.14.1 (2026-10-29)
+
+- The Eloquent button is back, after Sharpen.
+
 ## 1.14.0 (2026-10-29)
 
 - New `-sum` flag and Summarize button: a short overview of the input, main point first.

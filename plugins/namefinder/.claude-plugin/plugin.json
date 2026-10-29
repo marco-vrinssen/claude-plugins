@@ -2,7 +2,7 @@
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "namefinder",
   "displayName": "Namefinder",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Generates brand, product, project, handle and character names from sound symbolism and one name architecture.",
   "author": {
     "name": "Marco Vrinssen",

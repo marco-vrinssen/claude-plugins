@@ -32,7 +32,7 @@ One or two vowel sounds per name, often the same one twice (Saga, Yuzu, Opus, To
 
 ### 4. One hard, one soft
 
-Pair one hard consonant (k, t, p, g, b, x) with one soft (l, r, m, n, s, v). The hard one gives edge, the soft one flow (Volt, Opal, Kern, Atlas, Magma). Consonant clusters only at the start or end of the word, never three in the middle.
+Pair one hard consonant (k, t, p, g, b) with one soft (l, r, m, n, s, v). The hard one gives edge, the soft one flow (Volt, Opal, Kern, Atlas, Magma). Consonant clusters only at the start or end of the word, never three in the middle.
 
 ### 5. Clean edges
 
@@ -41,7 +41,7 @@ Pair one hard consonant (k, t, p, g, b, x) with one soft (l, r, m, n, s, v). The
 
 ### 6. Shape on the page
 
-Mix round letters (a, o, e, u) with straight ones (l, t, k, i). A y works as one accent. No awkward pairs like ck, ph, gh in the middle, no double letters unless they carry the rhythm.
+Mix round letters (a, o, e, u) with straight ones (l, t, k, i). A y works as one accent. No awkward pairs like ck, ph, gh in the middle, no double letters unless they carry the rhythm. Never j, q or x, transform or drop a word that needs them.
 
 ### 7. Transform when needed
 

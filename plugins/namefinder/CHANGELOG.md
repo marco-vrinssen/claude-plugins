@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.2.0 (2026-10-29)
+
+- Names never contain j, q or x.
+
 ## 1.1.0 (2026-10-29)
 
 - The skill carries its own name logic: borrow a word from a distant field, keep it short, repeat few vowels, pair one hard and one soft consonant, clean edges, a balanced shape on the page, one transform when needed.

@@ -18,7 +18,7 @@ export const LANGUAGES = [
 ]
 
 export const FLAGS = [
-  ['-c', 'Fix'],
+  ['-c', 'Correct'],
   ['-t', 'Translate'],
   ['-o', 'Sharpen'],
   ['-e', 'Eloquent'],
@@ -27,7 +27,7 @@ export const FLAGS = [
   ['-l', 'List'],
   ['-h', 'Humanize'],
   ['-p', 'Prompt'],
-  ['-pp', 'Prompt pro'],
+  ['-pp', 'Prompt (Enhanced)'],
   ['-ip', 'Image prompt'],
   ['-sp', 'Security prompt'],
 ] as const

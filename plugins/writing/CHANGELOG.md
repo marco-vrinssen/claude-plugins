@@ -4,6 +4,7 @@
 
 - The Language picker is a dropdown again, Korean included.
 - The buttons share one even gap, the same between columns and rows.
+- Fix is now Correct and Prompt pro is now Prompt (Enhanced).
 
 ## 1.5.0 (2026-10-29)
 

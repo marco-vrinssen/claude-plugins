@@ -56,6 +56,7 @@ test('the band shows after /writing and sends the draft with the flag', async ($
 
   const desktop = await $.ui.mount({ ...BAND, surface: 'desktop' })
   expect((await desktop.find({ key: '-c' }))?.text).toBe('Correct')
+  expect((await desktop.find({ key: '-sum' }))?.text).toBe('Summarize')
   await desktop.unmount()
   await ui.unmount()
 })

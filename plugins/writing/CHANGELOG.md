@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.14.0 (2026-10-29)
+
+- New `-sum` flag and Summarize button: a short overview of the input, main point first.
+- Friendly is now Warm, and the prompt buttons read Prompt, Prompt (Enhanced), Prompt (Image) and Prompt (Security).
+- The Eloquent button is gone, `-e` still works as a flag.
+- The picker is now Response Language.
+
 ## 1.13.0 (2026-10-29)
 
 - The band's inner padding is tight again, and the rows sit closer together on desktop.

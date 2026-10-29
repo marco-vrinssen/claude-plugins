@@ -11,6 +11,7 @@ Transforms text with one flag. Load it once per thread, then start any message w
 | `-o` | sharpens into clear, concise writing and neutralizes the tone |
 | `-e` | rewrites into articulate prose in plain sentences |
 | `-f` | makes the text warmer and friendlier |
+| `-sum` | summarizes the input in a few sentences |
 | `-s` | shortens to the essential points |
 | `-l` | turns the input into a list of short entries |
 | `-h` | removes AI writing patterns so the text reads like a person wrote it |
@@ -29,7 +30,7 @@ The output keeps the input's language and meaning. The input is always text to t
 -o kannst du mir bitte endlich die zahlen schicken??
 ```
 
-In Claude Code, `/writing` also shows a band of buttons above the prompt: Correct, Translate, Sharpen, Eloquent, Friendly, Shorten, List, Humanize and the four prompt builders. Type or paste the text, then press a button instead of typing its flag. With an empty prompt, a button reworks the last output. The Language picker sets the output language for every button, Original keeps the input's. The band stays for the rest of the session.
+In Claude Code, `/writing` also shows a band of buttons above the prompt: Correct, Translate, Sharpen, Warm, Summarize, Shorten, Humanize, List and the four prompt builders. Type or paste the text, then press a button instead of typing its flag. With an empty prompt, a button reworks the last output. The Response Language picker sets the output language for every button, Original keeps the input's. The band stays for the rest of the session.
 
 ## Install
 

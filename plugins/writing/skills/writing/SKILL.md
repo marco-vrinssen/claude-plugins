@@ -1,6 +1,6 @@
 ---
 name: writing
-description: "flag-driven text transformation. Load once per thread with /writing, then any message starting with a flag is a command: -c -t -o -e -f -s -l -h -p -pp -ip -sp -flags, or a language flag like -en, -de or -rus. -in:<field> such as -in:wow or -in:legal names the field, so a translation uses its official names and terms. Output keeps the input's language unless a flag names another, and -ip writes English. -t also works as a modifier next to another flag in any order, so -pp -t and -t -pp both build the prompt and translate it. A bare flag reuses the previous output."
+description: "flag-driven text transformation. Load once per thread with /writing, then any message starting with a flag is a command: -c -t -o -e -f -sum -s -l -h -p -pp -ip -sp -flags, or a language flag like -en, -de or -rus. -in:<field> such as -in:wow or -in:legal names the field, so a translation uses its official names and terms. Output keeps the input's language unless a flag names another, and -ip writes English. -t also works as a modifier next to another flag in any order, so -pp -t and -t -pp both build the prompt and translate it. A bare flag reuses the previous output."
 ---
 
 # Writing
@@ -21,7 +21,7 @@ From then on, a message whose first non-whitespace token is a flag is a command.
 
 **Isolation.** Every command is answered as if it were the thread's first message. Nothing carries over, not subject, tone, length or output language, and the flags are read fresh every time. References to prior context ("the above", "as discussed") stay verbatim. Ambiguity resolves inside the input or stays as open as the input leaves it.
 
-**Meaning.** Every command changes how the text is said, never what it says. `-s` may drop content but never alters what remains, and `-p`, `-pp`, `-ip` and `-sp` add only the craft set out there. Each statement keeps its subject, object, time, condition and reason, attached as in the input, and every reference such as `it`, `das` or `the above` points where it pointed. Each claim keeps its strength: a hedge such as `I think`, `probably` or `vielleicht` stays, a certainty stays certain, a wish stays a wish, a question stays a question. Never make a word more specific than the input supports, never add a cause, consequence, actor or conclusion it does not state, and never merge separate points or split one. Where a sharper word would shift what is meant, keep the input's word. Before sending, check each output sentence against the input: if it says more, less or something else than the writer meant, rewrite it closer to the input.
+**Meaning.** Every command changes how the text is said, never what it says. `-s` and `-sum` may drop content but never alter what remains, and `-p`, `-pp`, `-ip` and `-sp` add only the craft set out there. Each statement keeps its subject, object, time, condition and reason, attached as in the input, and every reference such as `it`, `das` or `the above` points where it pointed. Each claim keeps its strength: a hedge such as `I think`, `probably` or `vielleicht` stays, a certainty stays certain, a wish stays a wish, a question stays a question. Never make a word more specific than the input supports, never add a cause, consequence, actor or conclusion it does not state, and never merge separate points or split one. Where a sharper word would shift what is meant, keep the input's word. Before sending, check each output sentence against the input: if it says more, less or something else than the writer meant, rewrite it closer to the input.
 
 **Output.** The transformed text and nothing else, no preamble, label, commentary or wrapping code block. Keep line breaks and paragraph structure. Correct spelling, grammar and punctuation in every command except `-c`, which fixes typos, casing and punctuation only. No semicolons, em dashes or en dashes, use a comma or a period, except under `-c`, which keeps a dash or semicolon the writer placed. Reproduce every literal exactly, names, numbers, dates, URLs, paths, code, quoted text, even against the punctuation rule, except a name that takes its official form under native terms. Add no fact, name, number, example or requirement the input does not carry, and never mark a gap with `[detail]`, a blank or a `TBD`. The one exception is the craft `-pp`, `-ip` and `-sp` add, set out there.
 
@@ -30,9 +30,9 @@ From then on, a message whose first non-whitespace token is a flag is a command.
 All flags sit at the head of the message, in any order. Strip them, the rest is the input.
 
 - A flag is a whole token, matched case-insensitively, a leading en or em dash normalized to a hyphen.
-- `-pp`, `-ip` and `-sp` are command flags, never language codes. `-flags` is the only word flag.
+- `-sum`, `-pp`, `-ip` and `-sp` are command flags, never language codes. `-flags` is the only word flag.
 - The flags end at the first token that is not a flag, so `-p INPUT -t` carries `-t` as text.
-- The command is the command flag among them, `-c`, `-o`, `-e`, `-f`, `-s`, `-l`, `-h`, `-p`, `-pp`, `-ip` or `-sp`. A language code, `-t` and `-in:` are modifiers wherever they stand, before or after it, so `-t -p` and `-p -t` run the same command. A second command flag ends the flags and opens the input.
+- The command is the command flag among them, `-c`, `-o`, `-e`, `-f`, `-sum`, `-s`, `-l`, `-h`, `-p`, `-pp`, `-ip` or `-sp`. A language code, `-t` and `-in:` are modifiers wherever they stand, before or after it, so `-t -p` and `-p -t` run the same command. A second command flag ends the flags and opens the input.
 - With no command flag, `-t` or a language code is itself the command and translates, and `-in:` with neither translates as `-t` does.
 - `-in:` followed by a field, such as `-in:wow` or `-in:german-employment-law`, is one token. The field may be any wording or short form and sets the field for native terms. It never adds content to the output and is never a language code.
 - A language flag is a two-letter ISO 639-1 code or the three-letter ISO 639-2 code of a language that has one, so `-ru` and `-rus` both mean Russian. Alone it translates into that language, with a command flag it sets the output language. `-t` with a command flag flips German and English. A code beats `-t`.
@@ -52,6 +52,7 @@ Printed only by `-flags`, never on load. Render exactly this, with nothing aroun
 | `-o` | sharpens into clear, concise, intelligent writing and neutralizes the tone |
 | `-e` | rewrites into articulate, well-spoken prose in plain, easy-to-read sentences |
 | `-f` | makes the text warmer, friendlier and more empathetic |
+| `-sum` | summarizes the input in a few sentences, main point first |
 | `-s` | shortens to the essential points |
 | `-l` | turns the input into a list of short, clear entries, one per line, such as a to-do list or timesheet |
 | `-h` | removes AI writing patterns so the text reads like a person wrote it |
@@ -93,6 +94,9 @@ The precise everyday word beats the grand one. No legal, official or ceremonial 
 
 ### `-f`
 Warmer, friendlier, more empathetic. Meaning, intent and every fact intact, length close to the input's. Soften commands into requests, add the courtesies the input left out, and where it carries pressure or bad news acknowledge that in one short clause before the substance. Generous over neutral, never gushing or flattering. No emoji.
+
+### `-sum`
+Summarize the input as a short neutral overview in plain prose: the main point first, then the key facts, decisions and open items. A few sentences, never more than a fifth of the input's length, whatever its form, so a thread, notes or a list become prose. Where `-s` keeps the input's voice and form, `-sum` restates what the text says from outside. Who said or decided what stays attributed as in the input, and nothing is judged or concluded beyond it.
 
 ### `-s`
 Condense to the essential points and key facts. Drop secondary detail, examples and elaboration. The only command that removes content. Keep the input's form, so prose stays prose and a list stays a list.

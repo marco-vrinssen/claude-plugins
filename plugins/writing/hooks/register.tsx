@@ -21,15 +21,15 @@ export const FLAGS = [
   ['-c', 'Correct'],
   ['-t', 'Translate'],
   ['-o', 'Sharpen'],
-  ['-e', 'Eloquent'],
-  ['-f', 'Friendly'],
+  ['-f', 'Warm'],
+  ['-sum', 'Summarize'],
   ['-s', 'Shorten'],
-  ['-l', 'List'],
   ['-h', 'Humanize'],
-  ['-pp', 'Prompt (Enhanced)'],
-  ['-ip', 'Image prompt'],
-  ['-sp', 'Security prompt'],
+  ['-l', 'List'],
   ['-p', 'Prompt'],
+  ['-pp', 'Prompt (Enhanced)'],
+  ['-ip', 'Prompt (Image)'],
+  ['-sp', 'Prompt (Security)'],
 ] as const
 
 // Sends the draft with the flag, or the bare flag to rework the last output.
@@ -64,7 +64,7 @@ export const register: Register = on => {
         {FLAGS.map(([flag, label]) => (
           <Button key={flag} label={label} onPress={() => apply($, flag)} />
         ))}
-        <Select key="language" label="Language" options={LANGUAGES} value={lang} onSelect={value => update($, language, () => value)} />
+        <Select key="language" label="Response Language" options={LANGUAGES} value={lang} onSelect={value => update($, language, () => value)} />
       </Box>
     )
   }).catch(($, e, next) => next(e))

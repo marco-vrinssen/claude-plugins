@@ -6,7 +6,7 @@ const language = atom({ plugin: 'writing', key: 'language' } as const, '')
 
 // The empty value keeps the input's language.
 export const LANGUAGES = [
-  { value: '', label: 'Same' },
+  { value: '', label: 'Original' },
   { value: '-en', label: 'English' },
   { value: '-de', label: 'German' },
   { value: '-fr', label: 'French' },
@@ -26,10 +26,10 @@ export const FLAGS = [
   ['-s', 'Shorten'],
   ['-l', 'List'],
   ['-h', 'Humanize'],
-  ['-p', 'Prompt'],
   ['-pp', 'Prompt (Enhanced)'],
   ['-ip', 'Image prompt'],
   ['-sp', 'Security prompt'],
+  ['-p', 'Prompt'],
 ] as const
 
 // Sends the draft with the flag, or the bare flag to rework the last output.
@@ -68,10 +68,8 @@ export const register: Register = on => {
             <Button key={flag} label={label} onPress={() => apply($, flag)} />
           </Box>
         ))}
-        <Box flexGrow={1} />
-        <Box key="controls" height={height} columnGap="xs">
+        <Box key="language" height={height}>
           <Select key="language" label="Language" options={LANGUAGES} value={lang} onSelect={value => update($, language, () => value)} />
-          <Button key="hide" role="dismiss" plain dimColor label="Hide" onPress={() => update($, isActive, () => false)} />
         </Box>
       </Box>
     )

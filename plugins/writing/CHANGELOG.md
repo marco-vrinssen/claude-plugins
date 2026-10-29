@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.12.0 (2026-10-29)
+
+- The band follows the new layout: Prompt sits after Security prompt, and the Language dropdown follows the buttons directly.
+- Same is now Original.
+- Hide is gone, so the band stays for the rest of the session.
+
 ## 1.11.0 (2026-10-29)
 
 - `-pp` asks its open questions as clickable choices, four at a time and as many rounds as it takes. Pick an answer, type your own or leave it open. Headless runs still get the numbered list.

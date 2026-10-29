@@ -9,10 +9,10 @@ Transforms text with one flag. Load it once per thread, then start any message w
 | `-c` | fixes typos, casing and punctuation and changes nothing else |
 | `-t` | translates between German and English, or flips another flag's output |
 | `-sh` | sharpens into clear, concise writing and neutralizes the tone |
-| `-e` | rewrites into articulate prose in plain sentences |
+| `-e` | rewrites into precise, measured prose with the quiet authority of a very intelligent lawyer |
 | `-w` | makes the text warmer and friendlier |
 | `-su` | summarizes the input in a few sentences |
-| `-s` | shortens to the essential points |
+| `-s` | shortens to the essential points, about half the length or less |
 | `-h` | removes AI writing patterns so the text reads like a person wrote it |
 | `-l` | turns the input into a list of short entries |
 | `-p`, `-pe` | turns the input into a prompt for Claude, `-pe` asks back first, with answers to click or type |

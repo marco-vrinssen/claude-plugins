@@ -1,5 +1,14 @@
 # Changelog
 
+## 2.1.0 (2026-10-29)
+
+- `-e` now writes like a very intelligent lawyer: precise, measured and slightly juridical, with the point first, then its ground and consequence. Still no legalese, nested clauses or added claims.
+- `-s` aims for about half the length or less and always keeps names, numbers, dates, decisions and deadlines.
+- `-su` writes at least one full sentence, even on a short input.
+- `-w` adds warmth only through requests, courtesies and one acknowledging clause, never a new promise, offer, apology or fact.
+- `-t` renders an idiom by its natural equivalent.
+- New examples for `-su`, `-w`, `-t` and `-h`, and one closing check replaces the three scattered ones in the core rules.
+
 ## 2.0.0 (2026-10-29)
 
 - Flags match the button names, two letters at most: Sharpen `-sh`, Warm `-w`, Summarize `-su`, Prompt (Enhanced) `-pe`, Prompt (Image) `-pi` and Prompt (Security) `-ps`. The old `-o`, `-f`, `-sum`, `-pp`, `-ip` and `-sp` are gone.

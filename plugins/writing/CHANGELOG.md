@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.11.0 (2026-10-29)
+
+- `-pp` asks its open questions as clickable choices, four at a time and as many rounds as it takes. Pick an answer, type your own or leave it open. Headless runs still get the numbered list.
+
 ## 1.10.0 (2026-10-29)
 
 - Tighter space between rows of buttons on desktop.

@@ -14,7 +14,7 @@ Transforms text with one flag. Load it once per thread, then start any message w
 | `-s` | shortens to the essential points |
 | `-l` | turns the input into a list of short entries |
 | `-h` | removes AI writing patterns so the text reads like a person wrote it |
-| `-p`, `-pp` | turns the input into a prompt for Claude, `-pp` asks back first |
+| `-p`, `-pp` | turns the input into a prompt for Claude, `-pp` asks back first, with answers to click or type |
 | `-ip` | turns the input into an image prompt |
 | `-sp` | turns the input into a security review prompt |
 | `-xx` | a language code such as `-en`, `-de` or `-rus` translates or sets the output language |

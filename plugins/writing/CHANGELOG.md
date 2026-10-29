@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.0.0 (2026-10-29)
+
+- Flags match the button names, two letters at most: Sharpen `-sh`, Warm `-w`, Summarize `-su`, Prompt (Enhanced) `-pe`, Prompt (Image) `-pi` and Prompt (Security) `-ps`. The old `-o`, `-f`, `-sum`, `-pp`, `-ip` and `-sp` are gone.
+- Sundanese, Pali and Pashto now take their three-letter codes `-sun`, `-pli` and `-pus`.
+
 ## 1.14.1 (2026-10-29)
 
 - The Eloquent button is back, after Sharpen.

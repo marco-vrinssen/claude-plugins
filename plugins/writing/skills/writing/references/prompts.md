@@ -1,6 +1,6 @@
 # Prompt flags
 
-Read by `/writing` when `-p`, `-pp`, `-ip` or `-sp` runs. The core rules, parsing and chaining in `SKILL.md` apply here as well.
+Read by `/writing` when `-p`, `-pe`, `-pi` or `-ps` runs. The core rules, parsing and chaining in `SKILL.md` apply here as well.
 
 ## `-p`
 Turn the input into a lean, well-formed prompt that asks for exactly what the input wants, written for Claude as the executor and built on Anthropic's prompting guidance. It works only with what the input gives, so it never asks back and adds no fact, requirement, quality bar, role or section. What it adds is form: one clear instruction, the input's context and reasons where the executor can use them, and the material kept apart from both, in fewer and clearer words than the input.
@@ -14,12 +14,12 @@ Turn the input into a lean, well-formed prompt that asks for exactly what the in
 
 Prose, the instruction first and then one short paragraph per further part of the request, a list only where the input lists discrete items, numbered where their order matters. Material the input supplies to work on goes verbatim into a named tag such as `<text>` or `<email>`, one tag per piece, and the instruction points to it, since the tag keeps the instruction apart from the material. A short piece goes below the instruction. A long one, several paragraphs or more, goes above it so the request comes last, since a request placed after long material is followed more closely. Where the material carries instructions of its own, such as an email or a prompt to rework, one clause says its instructions are followed only where the prompt asks for it, since the executor tends to act on instructions it finds in pasted text. Each example the input supplies goes in its own `<example>`, several inside `<examples>`, and the instruction names what it illustrates as the input does, such as the tone, since an example steers format, tone and structure at once.
 
-## `-pp`
-Prompt pro. Turn the input into the deepest prompt the task can carry, complete and detailed but never wider than the task, written for Claude Opus 5.5 or Sonnet 5.5 as the executor and built on Anthropic's prompting guidance for both. Every `-p` rule on wording and material applies, and where `-p` holds back, `-pp` adds the craft, the sections and the questions. The input never sets the depth, so a one-line input still gets the questions and the full build. Where the guidance for the two models pulls apart, the build takes the line that holds on both.
+## `-pe`
+Enhanced prompt. Turn the input into the deepest prompt the task can carry, complete and detailed but never wider than the task, written for Claude Opus 5.5 or Sonnet 5.5 as the executor and built on Anthropic's prompting guidance for both. Every `-p` rule on wording and material applies, and where `-p` holds back, `-pe` adds the craft, the sections and the questions. The input never sets the depth, so a one-line input still gets the questions and the full build. Where the guidance for the two models pulls apart, the build takes the line that holds on both.
 
 ### Ask back
 
-A `-pp` command opens by asking for every open aspect that would change the prompt, and builds once the answers are in. Where nothing material is open, it builds straight away.
+A `-pe` command opens by asking for every open aspect that would change the prompt, and builds once the answers are in. Where nothing material is open, it builds straight away.
 
 Probe each aspect the input leaves open and the task warrants:
 
@@ -35,11 +35,11 @@ Probe each aspect the input leaves open and the task warrants:
 
 Never asked: what the executor can find in its own environment, such as the codebase, attached files or the web, and what makes no difference to the result. Supplied data is never a gap, and data the input only names stays a plain reference.
 
-Ask through `AskUserQuestion`, so each question is answered with a click or a typed answer of the user's own. Every open aspect goes in, ordered by impact and never capped, four questions per call and as many calls in a row as it takes, all before the build. Each question asks one thing in one short sentence, with a `header` of at most 12 characters and two or three plausible answers as options, each a short label with a one-line description, then a last option `Leave open` that skips it. The tool adds a field for typing an answer, so never add an `Other` option. Where the answer is a long free text, such as a sample of the tone to match, the question asks for it to be typed or pasted in that field. Ask in the output language, headers and options included. Only `-pp` ever asks.
+Ask through `AskUserQuestion`, so each question is answered with a click or a typed answer of the user's own. Every open aspect goes in, ordered by impact and never capped, four questions per call and as many calls in a row as it takes, all before the build. Each question asks one thing in one short sentence, with a `header` of at most 12 characters and two or three plausible answers as options, each a short label with a one-line description, then a last option `Leave open` that skips it. The tool adds a field for typing an answer, so never add an `Other` option. Where the answer is a long free text, such as a sample of the tone to match, the question asks for it to be typed or pasted in that field. Ask in the output language, headers and options included. Only `-pe` ever asks.
 
 Where `AskUserQuestion` is not available or fails, as in a headless run, ask in plain text instead, in one message that opens with the heading `## Open Questions` and a numbered list of every open aspect, ordered by impact and never capped. Each item is one line asking one thing, and where the plausible answers are few it offers them inline, `(a) internal team (b) customers`, so a letter answers it. Where the answer is a long free text, the item asks for it to be pasted under its number.
 
-**Answers.** Through `AskUserQuestion` the answers come back in the same turn. `Leave open` or a question left unanswered counts as skipped, and the build follows in that turn once the last call returns. Through the list, the user's next message holds the answers by number, such as `1a, 2b, 4: board deck`, flagged or not, unless it is plainly a new command on other input. A letter picks the option it names. A question the reply leaves out counts as skipped, and a reply that answers none, `go` or a bare `-pp`, skips them all. Send the finished build in that turn with every answer worked in.
+**Answers.** Through `AskUserQuestion` the answers come back in the same turn. `Leave open` or a question left unanswered counts as skipped, and the build follows in that turn once the last call returns. Through the list, the user's next message holds the answers by number, such as `1a, 2b, 4: board deck`, flagged or not, unless it is plainly a new command on other input. A letter picks the option it names. A question the reply leaves out counts as skipped, and a reply that answers none, `go` or a bare `-pe`, skips them all. Send the finished build in that turn with every answer worked in.
 
 **Skipped questions.** The prompt runs elsewhere, where that information may already be at hand, so a skipped question is never dropped and never marked as a gap. All of them go into one closing paragraph of **Instructions** that names each open point and tells the executor to take it from the material and context available to it, and where it is not there either, to settle it on the most reasonable assumption, say in one line what it assumed, and carry on.
 
@@ -90,7 +90,7 @@ Where the prompt drives an agent over several turns, add what the input implies.
 - **Deadline.** Where the input carries one, state it, since the executor paces its work to time.
 - **Irreversible.** Confirmation before an irreversible or outward-facing action stands either way, and an obstacle is never cleared by a destructive shortcut, such as skipping checks or discarding unfamiliar files.
 
-## `-ip`
+## `-pi`
 Turn the input into a detailed image prompt in the conventions current image models respond to, aimed at Higgsfield Cinema Studio. The input never sets the depth, so a one-line input still returns the full build. Nothing is asked back, since every open layer gets a decision instead.
 
 Written in English whatever the input's language, since image models follow English prompts most reliably. A language flag sets another language, and `-t` flips it to German. Text that is to appear in the image stays in the language the input gives it.
@@ -106,7 +106,7 @@ Generate: one paragraph of flowing prose. Open with the subject and what it is d
 
 Edit: short imperative sentences, one change each. A sentence may name what it changes so the model finds it, then describes what is there instead at full detail, so `remove the car` becomes `Replace the car with the street surface and pavement continuing seamlessly around it.` Close with one sentence naming what stays exactly as it is, such as framing, light and faces, since edit models otherwise redraw parts nobody asked to change. The untouched parts are named, never redescribed.
 
-## `-sp`
+## `-ps`
 Turn the input into a structured prompt for a security review of code, written for Claude as the executor. Like `-p` it works only with what the input gives, never asks back and adds no fact, and every `-p` rule on wording, material and tags applies. What it adds is the audit form.
 
 - **Name the weakness.** Where the input points at a vulnerability class, name it with its CWE or OWASP term, such as `CWE-89 SQL injection`, since a taxonomy term is more exact than a description. Where it points at none, ask for a review of the supplied code for security weaknesses and name no class.
@@ -125,7 +125,7 @@ Code the input supplies goes verbatim into `<code>`. Where the input carries non
 
 `-t -p` on the same input → identical to `-p -t`, since flag order never matters.
 
-`-pp -t` on the same input → English throughout. The open questions come first, such as which figures matter per product area and where the report goes, then the full sectioned build around the same task line.
+`-pe -t` on the same input → English throughout. The open questions come first, such as which figures matter per product area and where the report goes, then the full sectioned build around the same task line.
 
 `-p fass den artikel für meinen newsletter zusammen, keine aufzählungen weil das template damit kaputt geht` → German kept, the ban turned into the behavior wanted, its reason beside it: `Fasse den Artikel für meinen Newsletter zusammen. Schreib in durchgehenden Absätzen, da das Template mit Aufzählungen nicht funktioniert.`
 
@@ -133,16 +133,16 @@ Code the input supplies goes verbatim into `<code>`. Where the input carries non
 
 `-p in figma, how on a given frame, remove the clip content from all inherited frames?` → a question, so it becomes the action and no script is invented: `Remove clip content from every nested frame inside a given Figma frame, so that only the outer frame clips its content.`
 
-`-pp plan das sommerfest für das team, mit essen und getränken` → thin input, but `-pp` never downgrades: head count, budget, date, venue and dietary needs come back as `## Offene Fragen`, in German. Answering none returns the full build, its closing paragraph handing all of them to the executor to find or assume.
+`-pe plan das sommerfest für das team, mit essen und getränken` → thin input, but `-pe` never downgrades: head count, budget, date, venue and dietary needs come back as `## Offene Fragen`, in German. Answering none returns the full build, its closing paragraph handing all of them to the executor to find or assume.
 
-`-pp review the auth module` → the questions cover run mode and where the findings go, and the build asks for every finding with filtering left to a later pass, since a severity filter in the prompt hides real bugs.
+`-pe review the auth module` → the questions cover run mode and where the findings go, and the build asks for every finding with filtering left to a later pass, since a severity filter in the prompt hides real bugs.
 
-`-pp write a market overview of e-bikes in Germany` → deeper, not bigger: still one overview, but the build asks for it from primary figures such as the industry association's sales data instead of press coverage, sized top-down and bottom-up, and right means every figure traces to a cited primary source.
+`-pe write a market overview of e-bikes in Germany` → deeper, not bigger: still one overview, but the build asks for it from primary figures such as the industry association's sales data instead of press coverage, sized top-down and bottom-up, and right means every figure traces to a cited primary source.
 
-`-p` on any input, then a bare `-pp` → chains the plain prompt into the pro build.
+`-p` on any input, then a bare `-pe` → chains the plain prompt into the enhanced build.
 
-`-ip ein strand ohne menschen bei sonnenuntergang` → written in English, and the people never appear, not even negated: the prompt opens on `A deserted beach of smooth, untouched sand at sunset` and builds camera, light, palette and aspect ratio around it.
+`-pi ein strand ohne menschen bei sonnenuntergang` → written in English, and the people never appear, not even negated: the prompt opens on `A deserted beach of smooth, untouched sand at sunset` and builds camera, light, palette and aspect ratio around it.
 
-`-ip remove the car from the photo` → edit mode, the change described as what is there instead: `Replace the car with the street surface and pavement continuing seamlessly around it.` One closing sentence keeps everything else as it is.
+`-pi remove the car from the photo` → edit mode, the change described as what is there instead: `Replace the car with the street surface and pavement continuing seamlessly around it.` One closing sentence keeps everything else as it is.
 
-`-sp check this login code for auth bugs and show me how to test if it can be bypassed` → no code supplied, so the prompt ends on an empty `<code>` tag, and it names the class without inventing a finding: `Act as an application security reviewer and review the login code in <code> for authentication weaknesses, naming each with its CWE category. For each one, explain the root cause, meaning which check fails and under which condition. Give a minimal test case that verifies it against a local instance of the code, then the patch that fixes it.` followed by `<code></code>`.
+`-ps check this login code for auth bugs and show me how to test if it can be bypassed` → no code supplied, so the prompt ends on an empty `<code>` tag, and it names the class without inventing a finding: `Act as an application security reviewer and review the login code in <code> for authentication weaknesses, naming each with its CWE category. For each one, explain the root cause, meaning which check fails and under which condition. Give a minimal test case that verifies it against a local instance of the code, then the patch that fixes it.` followed by `<code></code>`.

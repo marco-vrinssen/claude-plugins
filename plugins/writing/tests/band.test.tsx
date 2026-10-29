@@ -41,8 +41,8 @@ test('the band shows after /writing and sends the draft with the flag', async ($
 
   await $.command.run({ command: 'writing', args: '', origin: { kind: 'composer' }, presentation: { isFullscreen: false, columns: 80 } })
   const ui = await $.ui.mount(BAND)
-  await ui.press({ key: '-o' })
-  expect(sent).toEqual(['-o kannst du mir die zahlen schicken'])
+  await ui.press({ key: '-sh' })
+  expect(sent).toEqual(['-sh kannst du mir die zahlen schicken'])
   expect(draft).toBe('')
 
   await ui.press({ key: '-t' })
@@ -51,12 +51,12 @@ test('the band shows after /writing and sends the draft with the flag', async ($
   await ui.select({ key: 'language', value: '-ko' })
   await ui.select({ key: 'language', value: '-en' })
   draft = 'hallo'
-  await ui.press({ key: '-f' })
-  expect(sent[2]).toBe('-f -en hallo')
+  await ui.press({ key: '-w' })
+  expect(sent[2]).toBe('-w -en hallo')
 
   const desktop = await $.ui.mount({ ...BAND, surface: 'desktop' })
   expect((await desktop.find({ key: '-c' }))?.text).toBe('Correct')
-  expect((await desktop.find({ key: '-sum' }))?.text).toBe('Summarize')
+  expect((await desktop.find({ key: '-su' }))?.text).toBe('Summarize')
   await desktop.unmount()
   await ui.unmount()
 })

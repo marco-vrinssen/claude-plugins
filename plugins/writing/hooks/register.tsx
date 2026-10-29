@@ -20,17 +20,17 @@ export const LANGUAGES = [
 export const FLAGS = [
   ['-c', 'Correct'],
   ['-t', 'Translate'],
-  ['-o', 'Sharpen'],
+  ['-sh', 'Sharpen'],
   ['-e', 'Eloquent'],
-  ['-f', 'Warm'],
-  ['-sum', 'Summarize'],
+  ['-w', 'Warm'],
+  ['-su', 'Summarize'],
   ['-s', 'Shorten'],
   ['-h', 'Humanize'],
   ['-l', 'List'],
   ['-p', 'Prompt'],
-  ['-pp', 'Prompt (Enhanced)'],
-  ['-ip', 'Prompt (Image)'],
-  ['-sp', 'Prompt (Security)'],
+  ['-pe', 'Prompt (Enhanced)'],
+  ['-pi', 'Prompt (Image)'],
+  ['-ps', 'Prompt (Security)'],
 ] as const
 
 // Sends the draft with the flag, or the bare flag to rework the last output.

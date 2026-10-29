@@ -7,7 +7,7 @@ Claude Code plugins by Marco Vrinssen, published as the marketplace `marco-vrins
 | [youtube-reader](plugins/youtube-reader) | reads YouTube videos through transcript, chapters and frames |
 | [resume-ai-optimizer](plugins/resume-ai-optimizer) | optimizes resumes for AI screening: readable PDF, keyword fit, quantified bullets |
 | [writing](plugins/writing) | transforms text with one flag or a button above the prompt: fix, translate, sharpen, summarize, humanize, prompt |
-| [namefinder](plugins/namefinder) | generates names from sound symbolism, tuned to your taste |
+| [namefinder](plugins/namefinder) | generates names from sound symbolism and one name architecture |
 | [maccheck](plugins/maccheck) | finds why a Mac is slow, full or at risk and fixes what you approve |
 | [investment-analysis](plugins/investment-analysis) | sourced investment research with a buy, watch or avoid verdict |
 | [wow-addon-dev](plugins/wow-addon-dev) | World of Warcraft addon and WeakAura development checked against Blizzard's UI source |

@@ -28,7 +28,7 @@
     {
       "name": "namefinder",
       "source": "./plugins/namefinder",
-      "description": "Generates brand, product, project and character names from sound symbolism, tuned to your taste.",
+      "description": "Generates brand, product, project, handle and character names from sound symbolism and one name architecture.",
       "category": "productivity"
     },
     {

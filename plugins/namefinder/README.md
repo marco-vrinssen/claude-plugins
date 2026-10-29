@@ -1,6 +1,6 @@
 # Namefinder
 
-Generates names for brands, products, projects and characters from sound symbolism, tuned to your taste.
+Generates names for brands, products, projects, handles and characters from sound symbolism and one name architecture: short, often vowel-first, lifted from neutral fields, balanced hard and soft endings.
 
 ## Usage
 

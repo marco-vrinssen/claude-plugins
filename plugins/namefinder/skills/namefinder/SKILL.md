@@ -1,90 +1,92 @@
 ---
 name: namefinder
-description: "Generate brand, product, project or character names from sound symbolism, tuned to the user's taste. Invoke as /namefinder <what is named and the desired feel>, or /namefinder -l <...> for a bare list. Use whenever the user wants name ideas for anything."
+description: "Generate aesthetic, clean names for brands, products, projects, handles or characters from sound symbolism and a fixed name logic. Invoke as /namefinder <what is named and the desired feel>, or /namefinder -l <...> for a bare list. Use whenever the user wants name ideas for anything."
 ---
 
 # Namefinder
 
-A word carries a feel through its sounds alone. Meaning is optional. A good name works because its sound already says what it should say.
+A good name sounds finished when said once and looks balanced set in a plain sans. Its feel comes from sound and form, its meaning from somewhere else.
 
 ## Modes
 
-- `/namefinder <brief>` returns the long form: sound profile, 15 names with notes, top 3.
-- `/namefinder -l <brief>` returns a bare list of 30 names, one per line, nothing else.
-- A number in the brief overrides the count.
+- `/namefinder <brief>`: profile line, 15 names with notes, top 3.
+- `/namefinder -l <brief>`: 30 names, one per line, nothing else.
+- A number in the brief sets the count, a character limit sets the maximum length. Letters the brief fixes, such as a start or an end, are kept in every name.
 
-The brief names what is being named and the desired feel. When it gives no feel, infer 3 to 5 adjectives from the topic and state them in the profile line. Never ask back.
+When the brief gives no feel, infer 3 to 5 adjectives from the topic. Never ask back.
 
-## Taste
+## Name logic
 
-Read the Apple Notes note `Names` in the iCloud folder `Notes` first, read-only: `osascript -e 'tell application "Notes" to get plaintext of note "Names" of folder "Notes" of default account'`. It is the user's growing list of names they like. Calibrate to it, never return a name already on it. If the note is missing, say so in one line and work from the patterns below.
+### 1. Borrow, don't describe
 
-Patterns in that list:
+A name lifts a real word from a field far from the thing it names: science, astronomy, rock and matter, type and design, myth, places, plants and food, music, weighty German words, plain words that sound big. The borrowed word brings its prestige and its sound, never a description. Test: it could also be a typeface, a star, a stone or a myth (Pulsar, Opal, Grotesk, Gaia).
 
-- Short. Mostly 2 syllables and 3 to 7 letters, rarely over 3 syllables.
-- Often vowel-initial, A, O and E above all: Aeon, Opal, Orla, Eos, Atlas.
-- Real words lifted from neutral fields: science, astronomy, geology, typography, Greek and Latin myth. Isotop, Pulsar, Basalt, Kern, Glyph, Mythos.
-- German or European spellings over English ones: Granit, Diskret, Subtil, Grotesk, Kollision, Monopol.
-- Clipped words ending on a hard consonant: Anthrop, Entrop, Agnost, Obscur.
-- Respellings with y or a dropped vowel: Irys, Ysra, Myda, Nokya, Appl, Sofd.
-- Soft open endings in -a and -o balance the hard ones: Soma, Klima, Osmo, Alto.
-- Calm, confident, a little cold or ancient. Never cute or playful.
+### 2. Economy
 
-Never produce: puns, literal descriptions, compound SaaS names, suffixes like -ify, -ly or -io, hyphens or numbers.
+- 3 to 8 letters, 1 to 3 syllables, stress on the first. Every letter is heard.
+- One word in Title Case. A second word only as a plain number or modifier.
+
+### 3. Few vowels, repeated
+
+One or two vowel sounds per name, often the same one twice (Saga, Yuzu, Opus, Totem) or a bright one against a dark one (Klima, Orbit). No more than two vowels in a row.
+
+### 4. One hard, one soft
+
+Pair one hard consonant (k, t, p, g, b, x) with one soft (l, r, m, n, s, v). The hard one gives edge, the soft one flow (Volt, Opal, Kern, Atlas, Magma). Consonant clusters only at the start or end of the word, never three in the middle.
+
+### 5. Clean edges
+
+- Start on a strong letter: a vowel (A, O, E) or a firm consonant (K, M, S, T, V).
+- End either open on a vowel (-a, -o, -u, -i) for softness or on one clear consonant (-t, -k, -s, -m, -n, -l, -r) for closure.
+
+### 6. Shape on the page
+
+Mix round letters (a, o, e, u) with straight ones (l, t, k, i). A y works as one accent. No awkward pairs like ck, ph, gh in the middle, no double letters unless they carry the rhythm.
+
+### 7. Transform when needed
+
+When the borrowed word is too long, too plain or too common, transform it once:
+
+- Clip the suffix to a hard end (Anthrop from anthropic, Mycel from mycelium).
+- Respell with y, a doubled or a dropped letter (Irys, Appl, Rushh).
+- Use the German or European spelling (Granit, Isotop, Kollision).
+- Repeat a syllable for rhythm (Oyoy).
+
+### 8. Tone
+
+Calm, confident and timeless, sometimes heavy (Wucht, Brutal), playful only through rhythm. Never puns, literal descriptions, invented compounds like CloudSync, suffixes like -ify, -ly or -io, hyphens or digits. Never return an example from this skill.
 
 ## Sound to feel
 
-### Vowels
+| Sound | Feel |
+| --- | --- |
+| i, e | small, bright, quick, light |
+| a | broad, plain, calm |
+| o, u | large, dark, slow, heavy |
+| k, t, p | hard, sharp, decisive |
+| b, d, g | hard and heavier, rounder |
+| s, f, sh | airy, sleek, technical |
+| v, z | sleek and heavier |
+| m, n | soft, warm, humming |
+| l, r | smooth, flowing, elegant |
+| kr, st, sk, tr | harsh, mechanical, precise |
+| gl, bl, fl, pl | warm, glowing, gentle |
+| sl, sn, sw | sly, quick, sleek |
 
-- i, e (front, high): small, bright, quick, light.
-- a (open): broad, plain, calm.
-- o, u (back, low): large, dark, slow, warm, heavy.
-
-### Consonants
-
-| Group | Sounds | Feel |
-| --- | --- | --- |
-| Plosives | k, t, p, b, d, g | hard, sharp, sudden, decisive |
-| Fricatives | s, f, sh, v, z | airy, sleek, hissing, technical |
-| Nasals | m, n | soft, warm, humming |
-| Liquids | l, r | smooth, flowing, elegant |
-
-Voiceless sounds (k, t, p, s, f) feel lighter and sharper. Voiced sounds (g, d, b, z, v) feel heavier and rounder.
-
-### Clusters
-
-| Type | Examples | Feel |
-| --- | --- | --- |
-| Voiceless | kr, st, sk, tr | harsh, mechanical, precise |
-| Liquid | gl, bl, fl, pl | warm, glowing, gentle |
-| Sibilant | sl, sn, sw | sly, quick, sleek |
-
-### Shape
-
-- 1 to 2 syllables: punchy, modern, product-like.
-- 3 or more syllables: grand, elegant, ancient.
-- Stress on the first syllable: grounded, stable. On a later syllable: lifted, exotic.
-- Open vowel ending (-a, -o): soft, unfinished, organic.
-- Hard consonant ending (-k, -t): closed, decisive, technical.
-- Bouba/kiki: soft voiced sounds feel round, sharp voiceless sounds feel angular.
+1 to 2 syllables feel punchy and modern, 3 grand and ancient. Soft voiced sounds feel round, sharp voiceless ones angular.
 
 ## Method
 
-1. Fix 3 to 6 adjectives for the feel.
-2. Translate them into a sound profile: vowels, consonant groups, length, stress, ending.
-3. Generate well past the count, invented words welcome, real words only if their sound fits.
-4. Filter: readable on first sight, no stumble when said aloud, feel comes from sound, not meaning.
-5. Drop accidental words or unfortunate readings in English and German, and names of well-known brands.
+1. Fix 3 to 6 adjectives for the feel and turn them into a sound profile with the table.
+2. Pick 2 or 3 source fields whose words carry that sound.
+3. Lift words from them, then transform where rule 7 helps. Generate well past the count.
+4. Score each name against rules 2 to 6 and keep only those that pass all of them.
+5. Rank by how well the sound matches the profile.
 
-## Long form output
+## Output
 
-1. One line: `Profile: <adjectives> → <sound profile>`.
-2. A numbered table with the columns Name and Sound, the note at most 5 words.
+1. `Profile: <adjectives> → <sound profile>`
+2. A numbered table with Name and Sound, each note at most 5 words.
 3. `Top 3`, one line each on why it fits the brief.
-4. Search the web for each top 3 name plus the topic's field. Report a same-field brand by name and link, or `no same-field brand found`.
 
-Brand notes on the 15 come from memory and are unverified, so never call a name free. A search is no trademark or domain clearance. Say so once under the top 3.
-
-## List output
-
-Names only, one per line. No numbering, notes, headings or checks.
+Only find names. No brand, trademark, domain or handle checks, the user does those.

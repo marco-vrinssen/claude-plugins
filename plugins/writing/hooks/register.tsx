@@ -3,7 +3,6 @@ import type { EngineInterface, Register } from 'claude-code'
 
 const isActive = atom({ plugin: 'writing', key: 'isActive' } as const, false)
 const language = atom({ plugin: 'writing', key: 'language' } as const, '')
-const isPicking = atom({ plugin: 'writing', key: 'isPicking' } as const, false)
 
 // The empty value keeps the input's language.
 export const LANGUAGES = [
@@ -53,28 +52,20 @@ export const register: Register = on => {
   }).catch(($, e, next) => next(e))
 
   on('ui.render', { component: 'AbovePrompt' }, async ($, e, next) => {
-    if (e.props.hasSurvey || !(await read($, isActive))) return next(e)
+    // Only the terminal and desktop draw a Select.
+    if (e.props.hasSurvey || (e.surface !== 'terminal' && e.surface !== 'desktop') || !(await read($, isActive))) return next(e)
 
-    const { Box, Button } = $.ui.resolve(e)
+    const { Box, Button, Select } = $.ui.resolve(e)
     const lang = await read($, language)
-    const isOpen = await read($, isPicking)
-    const current = LANGUAGES.find(({ value }) => value === lang)?.label ?? 'Same'
 
-    // Picking a language swaps the flag buttons for one button per language.
-    const pick = async (value: string) => {
-      await update($, language, () => value)
-      await update($, isPicking, () => false)
-    }
-
+    // One gap spaces columns and rows by the same step.
     return (
-      <Box flexDirection="row" flexWrap="wrap" columnGap={2} rowGap="sm">
-        {isOpen
-          ? LANGUAGES.map(({ value, label }) => (
-              <Button key={`lang${value}`} label={label} variant={value === lang ? 'primary' : undefined} onPress={() => pick(value)} />
-            ))
-          : FLAGS.map(([flag, label]) => <Button key={flag} label={label} onPress={() => apply($, flag)} />)}
+      <Box flexDirection="row" flexWrap="wrap" gap="md">
+        {FLAGS.map(([flag, label]) => (
+          <Button key={flag} label={label} onPress={() => apply($, flag)} />
+        ))}
         <Box flexGrow={1} />
-        <Button key="language" label={`Language: ${current}`} onPress={() => update($, isPicking, open => !open)} />
+        <Select key="language" label="Language" options={LANGUAGES} value={lang} onSelect={value => update($, language, () => value)} />
         <Button key="hide" role="dismiss" plain dimColor label="Hide" onPress={() => update($, isActive, () => false)} />
       </Box>
     )

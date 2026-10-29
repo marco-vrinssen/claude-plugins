@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.6.0 (2026-10-29)
+
+- The Language picker is a dropdown again, Korean included.
+- The buttons share one even gap, the same between columns and rows.
+
 ## 1.5.0 (2026-10-29)
 
 - The Language picker is a button like the others. It opens one button per language in place of the flags, and a pick closes it again.

@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.13.0 (2026-10-29)
+
+- The band's inner padding is tight again, and the rows sit closer together on desktop.
+
 ## 1.12.0 (2026-10-29)
 
 - The band follows the new layout: Prompt sits after Security prompt, and the Language dropdown follows the buttons directly.

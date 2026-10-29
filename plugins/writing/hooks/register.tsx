@@ -58,19 +58,13 @@ export const register: Register = on => {
     const { Box, Button, Select } = $.ui.resolve(e)
     const lang = await read($, language)
 
-    // A desktop button needs two lines, which leave 12px between rows with no row gap.
-    const height = e.surface === 'desktop' ? 2 : 1
-
+    // A desktop button spills 4px past its row on each side, so the row gap is one step larger.
     return (
-      <Box flexDirection="row" flexWrap="wrap" columnGap="xs">
+      <Box flexDirection="row" flexWrap="wrap" columnGap="xs" rowGap="md">
         {FLAGS.map(([flag, label]) => (
-          <Box key={flag} height={height}>
-            <Button key={flag} label={label} onPress={() => apply($, flag)} />
-          </Box>
+          <Button key={flag} label={label} onPress={() => apply($, flag)} />
         ))}
-        <Box key="language" height={height}>
-          <Select key="language" label="Language" options={LANGUAGES} value={lang} onSelect={value => update($, language, () => value)} />
-        </Box>
+        <Select key="language" label="Language" options={LANGUAGES} value={lang} onSelect={value => update($, language, () => value)} />
       </Box>
     )
   }).catch(($, e, next) => next(e))

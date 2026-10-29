@@ -58,11 +58,11 @@ export const register: Register = on => {
     const { Box, Button, Select } = $.ui.resolve(e)
     const lang = await read($, language)
 
-    // A desktop button is two lines tall, so each row is too and one gap spaces both ways.
+    // A desktop button needs two lines, which leave 12px between rows with no row gap.
     const height = e.surface === 'desktop' ? 2 : 1
 
     return (
-      <Box flexDirection="row" flexWrap="wrap" gap="xs">
+      <Box flexDirection="row" flexWrap="wrap" columnGap="xs">
         {FLAGS.map(([flag, label]) => (
           <Box key={flag} height={height}>
             <Button key={flag} label={label} onPress={() => apply($, flag)} />

@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.10.0 (2026-10-29)
+
+- Tighter space between rows of buttons on desktop.
+
 ## 1.9.0 (2026-10-29)
 
 - On desktop each row of buttons is as tall as a button, so one even gap spaces the buttons across and down.

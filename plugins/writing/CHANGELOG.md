@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.4.0 (2026-10-29)
+
+- A Language picker in the band sets the output language for every button: Same keeps the input's language, or pick English, German, French, Spanish, Italian, Dutch or Russian.
+- The flag buttons are real buttons with spacing between them, native buttons on desktop and `[ Fix ]` in the terminal. Hide is the band's close control.
+
 ## 1.3.0 (2026-10-29)
 
 - A band of buttons above the prompt appears once you type `/writing`. Each button sends the draft with its flag, or with an empty draft reworks the last output. Hide closes it until the next `/writing`.

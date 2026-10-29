@@ -48,6 +48,11 @@ test('the band shows after /writing and sends the draft with the flag', async ($
   await ui.press({ key: '-t' })
   expect(sent[1]).toBe('-t')
 
+  await ui.select({ key: 'language', value: '-en' })
+  draft = 'hallo'
+  await ui.press({ key: '-f' })
+  expect(sent[2]).toBe('-f -en hallo')
+
   await ui.press({ key: 'hide' })
   expect((await ui.find({ type: 'Text' }))?.text).toBe('engine')
   await ui.unmount()

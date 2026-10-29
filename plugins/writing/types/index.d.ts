@@ -1,5 +1,5 @@
 declare module 'claude-code' {
   interface PluginState {
-    writing: { isActive: boolean }
+    writing: { isActive: boolean; language: string }
   }
 }

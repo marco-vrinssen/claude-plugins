@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.9.0 (2026-10-29)
+
+- On desktop each row of buttons is as tall as a button, so one even gap spaces the buttons across and down.
+
 ## 1.8.0 (2026-10-29)
 
 - Wrapped rows of buttons no longer overlap on desktop. Each row gets one line of space for the button padding.

@@ -58,15 +58,21 @@ export const register: Register = on => {
     const { Box, Button, Select } = $.ui.resolve(e)
     const lang = await read($, language)
 
-    // Rows are one line tall, so the row gap leaves room for the desktop button's padding.
+    // A desktop button is two lines tall, so each row is too and one gap spaces both ways.
+    const height = e.surface === 'desktop' ? 2 : 1
+
     return (
-      <Box flexDirection="row" flexWrap="wrap" columnGap="xs" rowGap={1}>
+      <Box flexDirection="row" flexWrap="wrap" gap="xs">
         {FLAGS.map(([flag, label]) => (
-          <Button key={flag} label={label} onPress={() => apply($, flag)} />
+          <Box key={flag} height={height}>
+            <Button key={flag} label={label} onPress={() => apply($, flag)} />
+          </Box>
         ))}
         <Box flexGrow={1} />
-        <Select key="language" label="Language" options={LANGUAGES} value={lang} onSelect={value => update($, language, () => value)} />
-        <Button key="hide" role="dismiss" plain dimColor label="Hide" onPress={() => update($, isActive, () => false)} />
+        <Box key="controls" height={height} columnGap="xs">
+          <Select key="language" label="Language" options={LANGUAGES} value={lang} onSelect={value => update($, language, () => value)} />
+          <Button key="hide" role="dismiss" plain dimColor label="Hide" onPress={() => update($, isActive, () => false)} />
+        </Box>
       </Box>
     )
   }).catch(($, e, next) => next(e))

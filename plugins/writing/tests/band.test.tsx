@@ -54,6 +54,10 @@ test('the band shows after /writing and sends the draft with the flag', async ($
   await ui.press({ key: '-f' })
   expect(sent[2]).toBe('-f -en hallo')
 
+  const desktop = await $.ui.mount({ ...BAND, surface: 'desktop' })
+  expect((await desktop.find({ key: '-c' }))?.text).toBe('Correct')
+  await desktop.unmount()
+
   await ui.press({ key: 'hide' })
   expect((await ui.find({ type: 'Text' }))?.text).toBe('engine')
   await ui.unmount()

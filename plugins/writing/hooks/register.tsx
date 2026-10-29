@@ -60,7 +60,7 @@ export const register: Register = on => {
 
     // One gap spaces columns and rows by the same step.
     return (
-      <Box flexDirection="row" flexWrap="wrap" gap="md">
+      <Box flexDirection="row" flexWrap="wrap" gap="xs">
         {FLAGS.map(([flag, label]) => (
           <Button key={flag} label={label} onPress={() => apply($, flag)} />
         ))}

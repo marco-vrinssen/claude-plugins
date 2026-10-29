@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.7.0 (2026-10-29)
+
+- Tighter, even spacing between the buttons, the smallest step across and down.
+
 ## 1.6.0 (2026-10-29)
 
 - The Language picker is a dropdown again, Korean included.

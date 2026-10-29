@@ -2,8 +2,8 @@
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "writing",
   "displayName": "Writing",
-  "version": "1.2.0",
-  "description": "Flag-driven text transformation. One flag fixes, translates, sharpens, shortens, lists or humanizes text, or turns it into a prompt for Claude. Keeps the input's language and meaning.",
+  "version": "1.3.0",
+  "description": "Flag-driven text transformation. One flag, or one button above the prompt, fixes, translates, sharpens, shortens, lists or humanizes text, or turns it into a prompt for Claude. Keeps the input's language and meaning.",
   "author": {
     "name": "Marco Vrinssen",
     "url": "https://github.com/marco-vrinssen"
@@ -17,5 +17,6 @@
     "translation",
     "prompts",
     "humanizer"
-  ]
+  ],
+  "types": "./types/index.d.ts"
 }

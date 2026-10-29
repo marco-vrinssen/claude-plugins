@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.3.0 (2026-10-29)
+
+- A band of buttons above the prompt appears once you type `/writing`. Each button sends the draft with its flag, or with an empty draft reworks the last output. Hide closes it until the next `/writing`.
+
 ## 1.2.0 (2026-10-28)
 
 - Translations use the established names and terms of the text's field instead of literal ones: official game, film and software names, legal, medical and technical terms, job titles. A name whose official form is unknown stays as written.

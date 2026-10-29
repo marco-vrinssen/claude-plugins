@@ -22,7 +22,7 @@
     {
       "name": "writing",
       "source": "./plugins/writing",
-      "description": "Flag-driven text transformation. One flag fixes, translates, sharpens, shortens, lists or humanizes text, or turns it into a prompt for Claude. Keeps the input's language and meaning.",
+      "description": "Flag-driven text transformation. One flag, or one button above the prompt, fixes, translates, sharpens, shortens, lists or humanizes text, or turns it into a prompt for Claude. Keeps the input's language and meaning.",
       "category": "productivity"
     },
     {

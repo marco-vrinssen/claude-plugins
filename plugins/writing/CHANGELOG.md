@@ -1,5 +1,10 @@
 # Changelog
 
+## 3.0.0 (2026-10-29)
+
+- `-s` and the Shorten button are gone. `-sh` now also cuts repetition and elaboration that adds nothing, keeping names, numbers, dates, decisions, deadlines and the input's form.
+- `-su` summarizes as a short bullet list, main point first.
+
 ## 2.1.0 (2026-10-29)
 
 - `-e` now writes like a very intelligent lawyer: precise, measured and slightly juridical, with the point first, then its ground and consequence. Still no legalese, nested clauses or added claims.

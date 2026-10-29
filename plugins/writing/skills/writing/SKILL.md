@@ -1,6 +1,6 @@
 ---
 name: writing
-description: "flag-driven text transformation. Load once per thread with /writing, then any message starting with a flag is a command: -c -t -sh -e -w -su -s -l -h -p -pe -pi -ps -flags, or a language flag like -en, -de or -rus. -in:<field> such as -in:wow or -in:legal names the field, so a translation uses its official names and terms. Output keeps the input's language unless a flag names another, and -pi writes English. -t also works as a modifier next to another flag in any order, so -pe -t and -t -pe both build the prompt and translate it. A bare flag reuses the previous output."
+description: "flag-driven text transformation. Load once per thread with /writing, then any message starting with a flag is a command: -c -t -sh -e -w -su -l -h -p -pe -pi -ps -flags, or a language flag like -en, -de or -rus. -in:<field> such as -in:wow or -in:legal names the field, so a translation uses its official names and terms. Output keeps the input's language unless a flag names another, and -pi writes English. -t also works as a modifier next to another flag in any order, so -pe -t and -t -pe both build the prompt and translate it. A bare flag reuses the previous output."
 ---
 
 # Writing
@@ -21,7 +21,7 @@ From then on, a message whose first non-whitespace token is a flag is a command.
 
 **Isolation.** Every command is answered as if it were the thread's first message. Nothing carries over, not subject, tone, length or output language, and the flags are read fresh every time. References to prior context ("the above", "as discussed") stay verbatim. Ambiguity resolves inside the input or stays as open as the input leaves it.
 
-**Meaning.** Every command changes how the text is said, never what it says. `-s` and `-su` may drop content but never alter what remains, and `-p`, `-pe`, `-pi` and `-ps` add only the craft set out there. Each statement keeps its subject, object, time, condition and reason, attached as in the input, and every reference such as `it`, `das` or `the above` points where it pointed. Each claim keeps its strength: a hedge such as `I think`, `probably` or `vielleicht` stays, a certainty stays certain, a wish stays a wish, a question stays a question. Never make a word more specific than the input supports, never add a cause, consequence, actor or conclusion it does not state, and never merge separate points or split one. Where a sharper word would shift what is meant, keep the input's word.
+**Meaning.** Every command changes how the text is said, never what it says. `-sh` and `-su` may drop content but never alter what remains, and `-p`, `-pe`, `-pi` and `-ps` add only the craft set out there. Each statement keeps its subject, object, time, condition and reason, attached as in the input, and every reference such as `it`, `das` or `the above` points where it pointed. Each claim keeps its strength: a hedge such as `I think`, `probably` or `vielleicht` stays, a certainty stays certain, a wish stays a wish, a question stays a question. Never make a word more specific than the input supports, never add a cause, consequence, actor or conclusion it does not state, and never merge separate points or split one. Where a sharper word would shift what is meant, keep the input's word.
 
 **Output.** The transformed text and nothing else, no preamble, label, commentary or wrapping code block. Keep line breaks and paragraph structure. Correct spelling, grammar and punctuation in every command except `-c`, which fixes typos, casing and punctuation only. No semicolons, em dashes or en dashes, use a comma or a period, except under `-c`, which keeps a dash or semicolon the writer placed. Reproduce every literal exactly, names, numbers, dates, URLs, paths, code, quoted text, even against the punctuation rule, except a name that takes its official form under native terms. Add no fact, name, number, example or requirement the input does not carry, and never mark a gap with `[detail]`, a blank or a `TBD`. The one exception is the craft `-pe`, `-pi` and `-ps` add, set out there.
 
@@ -34,7 +34,7 @@ All flags sit at the head of the message, in any order. Strip them, the rest is 
 - A flag is a whole token, matched case-insensitively, a leading en or em dash normalized to a hyphen.
 - `-sh`, `-su`, `-pe`, `-pi` and `-ps` are command flags, never language codes, so Sundanese, Pali and Pashto take their three-letter codes `-sun`, `-pli` and `-pus`. `-flags` is the only word flag.
 - The flags end at the first token that is not a flag, so `-p INPUT -t` carries `-t` as text.
-- The command is the command flag among them, `-c`, `-sh`, `-e`, `-w`, `-su`, `-s`, `-l`, `-h`, `-p`, `-pe`, `-pi` or `-ps`. A language code, `-t` and `-in:` are modifiers wherever they stand, before or after it, so `-t -p` and `-p -t` run the same command. A second command flag ends the flags and opens the input.
+- The command is the command flag among them, `-c`, `-sh`, `-e`, `-w`, `-su`, `-l`, `-h`, `-p`, `-pe`, `-pi` or `-ps`. A language code, `-t` and `-in:` are modifiers wherever they stand, before or after it, so `-t -p` and `-p -t` run the same command. A second command flag ends the flags and opens the input.
 - With no command flag, `-t` or a language code is itself the command and translates, and `-in:` with neither translates as `-t` does.
 - `-in:` followed by a field, such as `-in:wow` or `-in:german-employment-law`, is one token. The field may be any wording or short form and sets the field for native terms. It never adds content to the output and is never a language code.
 - A language flag is a two-letter ISO 639-1 code or the three-letter ISO 639-2 code of a language that has one, so `-ru` and `-rus` both mean Russian. Alone it translates into that language, with a command flag it sets the output language. `-t` with a command flag flips German and English. A code beats `-t`.
@@ -51,11 +51,10 @@ Printed only by `-flags`, never on load. Render exactly this, with nothing aroun
 | --- | --- |
 | `-c` | fixes typos, casing and punctuation and changes nothing else |
 | `-t` | translates between German and English. With another flag, before or after it, it flips that flag's output |
-| `-sh` | sharpens into clear, concise, intelligent writing and neutralizes the tone |
+| `-sh` | sharpens into clear, concise writing, cuts what adds nothing and neutralizes the tone |
 | `-e` | rewrites into precise, measured prose with the quiet authority of a very intelligent lawyer |
 | `-w` | makes the text warmer, friendlier and more empathetic |
-| `-su` | summarizes the input in a few sentences, main point first |
-| `-s` | shortens to the essential points, about half the length or less |
+| `-su` | summarizes the input as a short bullet list, main point first |
 | `-h` | removes AI writing patterns so the text reads like a person wrote it |
 | `-l` | turns the input into a list of short, clear entries, one per line, such as a to-do list or timesheet |
 | `-p` | turns the input into a lean, well-formed prompt for Claude, built only from what you gave it. Never asks back |
@@ -81,9 +80,9 @@ Everything else stays exactly as written: wording, word order, tone, style, abbr
 Translate between German and English. Any other input language goes to English, and another target takes a language flag. Preserve meaning, tone, register and formatting. An idiom takes the target language's natural equivalent, never a literal rendering.
 
 ### `-sh`
-Rewrite as a highly intelligent person would have written it first time: clear, concise, straight to the point. Lead with the point where moving it changes no reference or condition. Cut filler and weak phrasing. A hedge that carries real uncertainty, such as `I think` or `probably`, stays, since cutting it changes the claim. Plain, direct sentences, calm without blunt.
+Rewrite as a highly intelligent person would have written it first time: clear, concise, straight to the point. Lead with the point where moving it changes no reference or condition. Cut filler, weak phrasing, repetition and elaboration that adds nothing, so the text gets as short as it stays clear. Names, numbers, dates, decisions, deadlines and every position survive. Keep the input's form, so prose stays prose and a list stays a list. A hedge that carries real uncertainty, such as `I think` or `probably`, stays, since cutting it changes the claim. Plain, direct sentences, calm without blunt.
 
-Neutralize the tone in the same pass, so frustration, blame, sarcasm, intensifiers and exclamation marks go. Every fact and position stays at its original strength, disagreement included, said calmly but never softened into a different claim. Never drop substance, which is what `-s` is for.
+Neutralize the tone in the same pass, so frustration, blame, sarcasm, intensifiers and exclamation marks go. Every fact and position stays at its original strength, disagreement included, said calmly but never softened into a different claim.
 
 A question stays a question, `can you…` included, sharpened but never turned into an instruction or answered.
 
@@ -98,10 +97,7 @@ Choose the exact term over the grand one, and use the juridical shade sparingly,
 Warmer, friendlier, more empathetic. Meaning, intent and every fact intact, length close to the input's. Soften commands into requests, add the courtesies the input left out, and where it carries pressure or bad news acknowledge that in one short clause before the substance. Generous over neutral, never gushing or flattering. Warmth comes only from these moves, never from a new promise, offer, apology or fact. No emoji.
 
 ### `-su`
-Summarize the input as a short neutral overview in plain prose: the main point first, then the key facts, decisions and open items. A few sentences, never more than a fifth of the input's length but at least one full sentence, whatever its form, so a thread, notes or a list become prose. Where `-s` keeps the input's voice and form, `-su` restates what the text says from outside. Who said or decided what stays attributed as in the input, and nothing is judged or concluded beyond it.
-
-### `-s`
-Condense to the essential points and key facts, about half the input's length or less. Drop secondary detail, examples and elaboration. Names, numbers, dates, decisions and deadlines survive. Keep the input's form, so prose stays prose and a list stays a list.
+Summarize the input as a short neutral bullet list: the main point first, then the key facts, decisions and open items. One short line per point, each starting with `- `, never more than a fifth of the input's length but at least one bullet, whatever its form. Where `-sh` keeps the input's voice and form and `-l` keeps every point, `-su` keeps only the key points and restates them from outside. Who said or decided what stays attributed as in the input, and nothing is judged or concluded beyond it.
 
 ### `-l`
 Turn the input into a list of short, clear entries, such as a to-do list or the lines of a timesheet. One entry per line, no bullets or numbers, no blank lines between, capital first and period last.
@@ -145,9 +141,9 @@ Print the flag table above, in full and unchanged, with nothing else. Any text b
 
 `-sh kannst du mir bitte endlich die zahlen schicken?? ich warte jetzt seit einer woche und das meeting ist morgen` → German in, German out, since no flag moves the language and `Meeting` is a loanword: `Kannst du mir die Zahlen schicken? Ich warte seit einer Woche darauf, und das Meeting ist morgen.`
 
-`-s im letzten sprint haben wir das feature fürs deployment fertig gemacht, die tests laufen alle durch und nächste woche ist das review mit dem kunden` → stays German despite the English terms: `Das Deployment-Feature ist fertig, alle Tests laufen durch. Nächste Woche folgt das Review mit dem Kunden.`
+`-sh im letzten sprint haben wir das feature fürs deployment fertig gemacht, die tests laufen alle durch und nächste woche ist das review mit dem kunden` → stays German despite the English terms: `Das Deployment-Feature ist fertig, alle Tests laufen durch. Nächste Woche folgt das Review mit dem Kunden.`
 
-`-su` on a long chat in which Jana wants to launch on the 12th without the EU because legal needs two more weeks, and Max agrees if sales does → prose from outside, main point first, each position attributed, the open item named: `Jana proposes launching on the 12th without the EU, since legal needs two more weeks for the privacy text. Max agrees if sales does, and sales has not been asked yet.`
+`-su` on a long chat in which Jana wants to launch on the 12th without the EU because legal needs two more weeks, and Max agrees if sales does → bullets from outside, main point first, each position attributed, the open item named, on three lines: `- Jana proposes launching on the 12th without the EU.` `- Legal needs two more weeks for the privacy text.` `- Max agrees if sales does, and sales has not been asked yet.`
 
 `-en` on any input, then `-sh` on German input → German, since the earlier command's language never carries.
 
@@ -177,4 +173,4 @@ Print the flag table above, in full and unchanged, with nothing else. Any text b
 
 `-e i think the report is kinda done` then a bare `-t` → chains onto the eloquent output, not the original input.
 
-`-s` as the first flagged message of the thread → `No input.`
+`-su` as the first flagged message of the thread → `No input.`

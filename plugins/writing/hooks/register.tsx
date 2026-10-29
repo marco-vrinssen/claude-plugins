@@ -24,7 +24,6 @@ export const FLAGS = [
   ['-e', 'Eloquent'],
   ['-w', 'Warm'],
   ['-su', 'Summarize'],
-  ['-s', 'Shorten'],
   ['-h', 'Humanize'],
   ['-l', 'List'],
   ['-p', 'Prompt'],

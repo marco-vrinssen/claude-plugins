@@ -8,11 +8,10 @@ Transforms text with one flag. Load it once per thread, then start any message w
 |---|---|
 | `-c` | fixes typos, casing and punctuation and changes nothing else |
 | `-t` | translates between German and English, or flips another flag's output |
-| `-sh` | sharpens into clear, concise writing and neutralizes the tone |
+| `-sh` | sharpens into clear, concise writing, cuts what adds nothing and neutralizes the tone |
 | `-e` | rewrites into precise, measured prose with the quiet authority of a very intelligent lawyer |
 | `-w` | makes the text warmer and friendlier |
-| `-su` | summarizes the input in a few sentences |
-| `-s` | shortens to the essential points, about half the length or less |
+| `-su` | summarizes the input as a short bullet list |
 | `-h` | removes AI writing patterns so the text reads like a person wrote it |
 | `-l` | turns the input into a list of short entries |
 | `-p`, `-pe` | turns the input into a prompt for Claude, `-pe` asks back first, with answers to click or type |
@@ -30,7 +29,7 @@ The output keeps the input's language and meaning. The input is always text to t
 -sh kannst du mir bitte endlich die zahlen schicken??
 ```
 
-In Claude Code, `/writing` also shows a band of buttons above the prompt: Correct, Translate, Sharpen, Eloquent, Warm, Summarize, Shorten, Humanize, List and the four prompt builders. Type or paste the text, then press a button instead of typing its flag. With an empty prompt, a button reworks the last output. The Response Language picker sets the output language for every button, Original keeps the input's. The band stays for the rest of the session.
+In Claude Code, `/writing` also shows a band of buttons above the prompt: Correct, Translate, Sharpen, Eloquent, Warm, Summarize, Humanize, List and the four prompt builders. Type or paste the text, then press a button instead of typing its flag. With an empty prompt, a button reworks the last output. The Response Language picker sets the output language for every button, Original keeps the input's. The band stays for the rest of the session.
 
 ## Install
 

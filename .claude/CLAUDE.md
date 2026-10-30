@@ -2,7 +2,7 @@
 
 ## Rules
 
-- The repo is the marketplace `marco-vrinssen`. Each plugin lives in `plugins/<name>/` with its own `.claude-plugin/plugin.json`, `skills/`, README and CHANGELOG, and is listed in `.claude-plugin/marketplace.json` with `source: "./plugins/<name>"`.
+- The repo is the marketplace `marco-vrinssen`. Each plugin lives in `plugins/<name>/` with its own `.claude-plugin/plugin.json`, `skills/` or `output-styles/`, README and CHANGELOG, and is listed in `.claude-plugin/marketplace.json` with `source: "./plugins/<name>"`.
 - Only public plugins go here. Private plugins stay in their own private repos.
 - A plugin and its skill share one name, so the skill runs as `/<name>:<name>`. A generic name can trigger a review hold in Anthropic's plugin directory, which is accepted.
 ## Checks

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "adhd",
+  "displayName": "ADHD",
+  "version": "1.0.0",
+  "description": "Output style for short, readable replies: an intro, key facts, open questions and one next step, in sentences of 10 to 15 words.",
+  "author": {
+    "name": "Marco Vrinssen",
+    "url": "https://github.com/marco-vrinssen"
+  },
+  "homepage": "https://github.com/marco-vrinssen/claude-plugins/tree/main/plugins/adhd",
+  "repository": "https://github.com/marco-vrinssen/claude-plugins",
+  "license": "MIT",
+  "keywords": [
+    "output-style",
+    "adhd",
+    "readability",
+    "concise"
+  ]
+}

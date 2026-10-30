@@ -48,6 +48,12 @@
       "source": "./plugins/wow-addon-dev",
       "description": "World of Warcraft addon and WeakAura development. Verifies every API against the matching flavor branch of Blizzard's UI source, covers Midnight secret values, and builds ready-to-paste WeakAura import strings.",
       "category": "development"
+    },
+    {
+      "name": "adhd",
+      "source": "./plugins/adhd",
+      "description": "Output style for short, readable replies: an intro, key facts, open questions and one next step, in sentences of 10 to 15 words.",
+      "category": "productivity"
     }
   ]
 }
